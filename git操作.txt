@@ -1,5 +1,5 @@
 //拉取项目
-git pull git@github.com:caoweizheng/vueproject.git master
+git pull --rebase git@github.com:caoweizheng/vueproject.git master
 
 // 提交项目
 
