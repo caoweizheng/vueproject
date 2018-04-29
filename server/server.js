@@ -1,3 +1,3 @@
-const express = require('express');
+const router = require('./router/router.js');
 
-const app = express();
+router(8888);
