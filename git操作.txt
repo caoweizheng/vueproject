@@ -11,7 +11,7 @@ git commit -m "注释"
 
 git push origin 自己分支
 
-然后到到自己的github pull request
+然后到到自己的github pull request (最后不要点request merge)
 
 
 rebase
