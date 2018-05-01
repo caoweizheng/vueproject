@@ -1,0 +1,54 @@
+.addpro{
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	height: 350px;
+	width: 250px;
+	background:#fff;
+	border-radius:20px;
+	box-shadow: 0 0 2px 2px #ccc;
+	box-shadow:0 0 20px 5px #ccc;
+}
+.addPro{
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+	border: 0 none;
+	padding: 3px 20px;
+}
+.addpro label{
+	width: 200px;
+}
+.searchBox{
+	width: 350px;
+	height: 50px;
+	padding: 5px;
+}
+.searchBox input{
+	height: 30px;
+	width: 200px;
+	outline: none;
+}
+.searchBox button{
+	padding: 3px 10px;
+}
+
+table img{
+	height: 60px;
+	line-height: 60px;
+}
+table span{
+	display:inline-block;
+	width: 250px;
+	line-height: 60px;
+}
+input{
+	display: inline-block;
+}
+.deletePro{
+	padding: 3px 5px;
+	margin-right: 5px;
+}
+

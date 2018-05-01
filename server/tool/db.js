@@ -1,5 +1,7 @@
 const Mongoclient = require('mongoDB').MongoClient;
 
+const ObjectID = require('mongodb').ObjectID;
+
 const dbUrl = 'mongodb://localhost:27017';
 
 const apiResult = require('./apiResult.js');
@@ -19,6 +21,26 @@ module.exports = {
 		let result = await db.collection(_collection).find(_condition).toArray();
 
 		return apiResult(result.length > 0,result);
-	}
+	},
+    async insert(_collection,_data){
+        try{
+            let res = await db.collection(_collection).insert(_data);
+            
+            return apiResult(res.insertedCount>0,res); 
+        }catch(err){
+            return apiResult(false,err); 
+        }
+    },
+    async remove(_collection,id){
+        try{
+            let res = await db.collection(_collection).findAndRemove({'_id':new ObjectID(id)});
+            console.log(res)
+                 
+            return apiResult(res.insertedCount>0,res); 
+        }catch(err){
+            console.log(err)
+            return apiResult(false,err); 
+        }
+    }
 }
 
