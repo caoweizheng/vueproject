@@ -1,0 +1,7 @@
+.classify{
+	display: flex;
+    flex-direction: column;
+}
+.search{
+	height: 98px;
+}

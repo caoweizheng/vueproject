@@ -1,11 +1,11 @@
-body{
+.mangerMain{
 	background: #eff;
 }
-.main *{
+.mangerMain *{
 	margin: 0;
 	padding: 0;
 }
-.main{
+.mangerMain{
 
 }
 .head{
@@ -24,14 +24,21 @@ body{
 	float: left;
 	background: #fff;
 	padding-left: 10px;
-	margin-right: 20px;
+}
+
+.nav ul li{
+	border-bottom: 1px solid #ccc;
+	padding: 5px;
+	margin-bottom: 5px;
 }
 .nav a{
-	font-size:18px;
+	font-size:16px;
 }
 .content{
-	float: left;
-	height: 600px;
+	overflow-x: hidden;
+	float: right;
+	width: 1000px;
+	/*height: 480px;*/
 	background: #fff;
 	position:relative;
 

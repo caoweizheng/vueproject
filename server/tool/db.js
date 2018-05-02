@@ -34,13 +34,25 @@ module.exports = {
     async remove(_collection,id){
         try{
             let res = await db.collection(_collection).findAndRemove({'_id':new ObjectID(id)});
-            console.log(res)
+            console.log('remove',res)
                  
-            return apiResult(res.insertedCount>0,res); 
+            return apiResult(res.length>0,res); 
+        }catch(err){
+            console.log(err)
+            return apiResult(false,err); 
+        }
+    },
+    async update(_collection,proId,_data){
+        try{
+            let res = await db.collection(_collection).updateOne({'_id':new ObjectID(proId)},_data);
+            // console.log(res)
+                 
+            return apiResult(res.result.n>0,res); 
         }catch(err){
             console.log(err)
             return apiResult(false,err); 
         }
     }
+
 }
 

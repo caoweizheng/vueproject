@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 const baseUrl = 'http://10.3.133.83:8888/'
+// const baseUrl = 'http://localhost:8888/';
 
 let filterUrl = (_url) => {
     if(_url && _url.startsWith('http')){
@@ -13,8 +14,7 @@ import router from '../router/router.js';
 export default {
 
     get(_url, _params = {}){
-
-
+        document.querySelector('.markAll').style.display = 'block';
         return new Promise((resolve, reject) => {
             axios({
                 method:'get',
@@ -40,10 +40,12 @@ export default {
                     router.push({name:'login'})
                 } else {
                     resolve(res)
+                    document.querySelector('.markAll').style.display = 'none';
                     
                 }
             }).catch((error) => {
                 reject(error)
+                document.querySelector('.markAll').style.display = 'none';
             })
         })
     },
@@ -52,7 +54,7 @@ export default {
         // var params = new URLSearchParams();
         // params.append('username', _params.username);
         // params.append('password', _params.password);
-
+        document.querySelector('.markAll').style.display = 'block';
         return new Promise((resolve, reject) => {
 
             axios({
@@ -71,8 +73,10 @@ export default {
                     return ret
                 }],
             }).then((res) => {
+                document.querySelector('.markAll').style.display = 'none';
                 resolve(res)                     
             }).catch((error) => {
+                document.querySelector('.markAll').style.display = 'none';
                 reject(error)
             })
         })

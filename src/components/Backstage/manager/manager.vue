@@ -1,5 +1,5 @@
 <template>
-	<div class="main">
+	<div class="mangerMain">
 		<div class="head">
 			<h3>天天果园后台管理系统</h3>
 		</div>

@@ -14,7 +14,7 @@
 					<td><span>{{item.phone}}</span></td>
 					<td><span>{{item.password}}</span></td>
 					<td><span>{{item.time}}</span></td>
-					<td><span><button class="deleteUser btn btn-danger">删除</button></span></td>
+					<td><span><button @click="delUser(item._id,idx)" class="deleteUser btn btn-danger">删除</button></span></td>
 				</tr>
 			</tbody>
 		</table>
@@ -34,6 +34,11 @@
 	.deleteUser{
 		padding: 3px 5px;
 	}
+
+	#box{
+		height: 400px;
+		overflow-x: hidden;
+	}
 </style>
 
 <script type="text/javascript">
@@ -45,7 +50,13 @@
 			}
 		},
 		methods:{
-
+			delUser(id,idx){
+				this.userlist.splice(idx,1);
+				http.post('delUser',{uId:id}).then((res) => {
+					console.log(res)
+					     
+				})
+			}
 		},
 		mounted(){
 
