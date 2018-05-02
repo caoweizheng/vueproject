@@ -8,9 +8,11 @@ module.exports = {
 
 	        let product = {
 	          title:req.body.title,
+	          subtitle:req.body.desc,
 	          price:req.body.price,
-	          url:req.body.url,
-	          type:req.body.type
+	          volume:req.body.volume,
+	          image:req.body.url,
+	          target_type:req.body.type
 	        }
 	        let result = await db.insert('products',product); 
 
@@ -29,6 +31,23 @@ module.exports = {
 
 			res.send(result);
 
+		}),
+
+		app.post('/updatePro',async (req,res) => {
+
+			let conId = req.body.proId;
+
+			let data = {
+				title: req.body.title,
+				subtitle: req.body.desc,
+				price: req.body.price,
+				volume: req.body.volume,
+				image: req.body.url,
+				target_type: req.body.type
+			}
+
+			let result = await db.update('products',conId,{$set:data});
+			res.send(result)
 		})
 	}
 }
