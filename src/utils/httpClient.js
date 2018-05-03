@@ -21,7 +21,7 @@ export default {
                 url:filterUrl(_url),
                 data:_params,
                 headers:{
-                    'token':window.localStorage.getItem('username')
+                    'token':window.localStorage.getItem('phome')
                 },
                 transformRequest: [function (data) {
                     let ret = ''
@@ -37,7 +37,7 @@ export default {
                      
                 if(!res.data.state && res.data.msg=='NoState'){
 
-                    router.push({name:'login'})
+                    router.push({name:'phome'})
                 } else {
                     resolve(res)
                     document.querySelector('.markAll').style.display = 'none';
@@ -63,7 +63,7 @@ export default {
                 data:_params,
                 headers:{
                     'Content-Type': 'application/x-www-form-urlencoded',
-                    'token':window.localStorage.getItem('username')
+                    'token':window.localStorage.getItem('phone')
                 },
                 transformRequest: [function (data) {
                     let ret = ''
@@ -73,8 +73,15 @@ export default {
                     return ret
                 }],
             }).then((res) => {
-                document.querySelector('.markAll').style.display = 'none';
-                resolve(res)                     
+
+                if(!res.data.state && res.data.msg=='NoState'){
+
+                    router.push({name:'userlogin'})
+                } else {
+                    resolve(res)
+                    document.querySelector('.markAll').style.display = 'none';
+                    
+                }                   
             }).catch((error) => {
                 document.querySelector('.markAll').style.display = 'none';
                 reject(error)

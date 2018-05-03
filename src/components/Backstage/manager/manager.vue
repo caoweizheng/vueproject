@@ -26,6 +26,6 @@
 <script type="text/javascript">
 	import '../../../css/manager.css'
 	export default{
-
+		
 	}
 </script>

@@ -32,7 +32,8 @@
 		methods:{
 			login(){
 				http.post('userlogin',{phone:this.phone,password:this.password}).then((res) => {
-
+					console.log(res)
+					     
 					if(res.data.state){
 
                         window.localStorage.setItem('phone',res.data.data);
