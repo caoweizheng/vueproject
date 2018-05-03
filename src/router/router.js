@@ -8,6 +8,7 @@ Vue.use(VueRouter);
 import home from '../components/main/home/home.vue';
 import car from '../components/main/car/car.vue';
 import classify from '../components/main/classify/classify.vue';
+import detail from '../components/detail/detail.vue';
 import my from '../components/main/my/my.vue';
 import login from '../components/Backstage/login/login.vue';
 import manager from '../components/Backstage/manager/manager.vue';
@@ -23,6 +24,7 @@ const router = new VueRouter({
 	routes:[
 		{path:'/mlogin',component:login,name:'mlogin'},
 		{path:'/userlogin',component:userlogin,name:'userlogin'},
+		{path:'/detail',component:detail,name:'detail'},
 		{path:'/register',component:register,name:'register'},
 		{path:'/manager',component:manager,name:'manager',children:[
 			{path:'/userlist',component:users,name:'users'},
