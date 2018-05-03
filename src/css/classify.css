@@ -1,7 +1,66 @@
 .classify{
+	height: 100%;
 	display: flex;
     flex-direction: column;
+
 }
 .search{
 	height: 98px;
+    border:1px solid #ddd;
+    background: #F8F8F8;
+    padding: 20px;
 }
+.search span{
+	background: #eee;
+	display: inline-block;
+	height: 58px;
+	width: 100%;
+	border-radius: 15px;
+	text-align: center;
+	line-height: 58px;
+	font-size: 28px;
+}
+.classify_main{
+	flex:1;
+	display:flex;
+}
+.classify_main .classify_left{
+	width: 180px;
+	background: #F5F5F5;
+}
+.classify_main .classify_left li{
+	text-align: center;
+	margin: 5px 0;
+	height: 70px;
+	line-height: 70px;
+}
+.classify_main .classify_left a{
+	font-size: 30px;
+	color:#999;
+	text-decoration: none;
+}
+
+.classify_main .classify_left li:hover{
+	background: #fff;
+	border-left: 3px solid green;
+}
+.classify_main .classify_left li:hover a{
+	color:green;
+}
+.classify_right{
+	flex:1;
+}
+.classify_right li{
+	float: left;
+	list-style: none;
+	margin-left: 20px;
+	text-align: center;
+}
+.classify_right img{
+	width: 120px;
+	margin-bottom: 5px;
+}
+.classify_right span{
+	color:#999
+}
+

@@ -2,28 +2,28 @@
 	
 	<div class="classify">
 		<div class="search">
-			<input type="text" />
+			<span><i class="fa fa-search"></i>奇异果</span>
 		</div>
-		<main>
+		<main class="classify_main">
 			<div class="classify_left">
 				<ul>
 					<li>
-						<router-link to="/gyyx">果园优选</router-link>
+						<router-link to="/gyyx/gyyx">果园优选</router-link>
 					</li>
 					<li>
-						<router-link to="/xxsg">新鲜水果</router-link>
+						<router-link to="/gyyx/gyyx">新鲜水果</router-link>
 					</li>
 					<li>
-						<router-link to="/xxsp">休闲食品</router-link>
+						<router-link to="/gyyx/yxsp">休闲食品</router-link>
 					</li>
 					<li>
-						<router-link to="/lygh">粮油干货</router-link>
+						<router-link to="/gyyx/gyyx">粮油干货</router-link>
 					</li>
 					<li>
-						<router-link to="/ctbj">冲调保健</router-link>
+						<router-link to="/gyyx/gyyx">冲调保健</router-link>
 					</li>
 					<li>
-						<router-link to="/jsyl">酒水饮料</router-link>
+						<router-link to="/gyyx/gyyx">酒水饮料</router-link>
 					</li>
 				</ul>
 			</div>
