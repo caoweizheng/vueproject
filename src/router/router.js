@@ -21,9 +21,8 @@ import register from '../components/register/register.vue'
 
 import classifyDatagrid from '../components/main/classify/classifyDatagrid.vue';
 
+
 import classifyDatagrid2 from '../components/main/classify/classifyDatagrid2.vue';
-
-
 
 const router = new VueRouter({
 	routes:[
