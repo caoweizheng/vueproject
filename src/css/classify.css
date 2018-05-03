@@ -45,7 +45,7 @@
 .classify_left ul li{
 	height: .42rem;
  */
-.search{
+.c_search{
     top: 0;
     left: 0;
     width: 100%;
@@ -55,7 +55,7 @@
     background: #f8f8f8;
     padding: 0.106667rem;
 }
-.search span{
+.c_search span{
 	background: #eee;
 	display: inline-block;
 	height: .28rem;
@@ -74,28 +74,30 @@
 	width: .78rem;
 	background: #F5F5F5;
 }
-.classify_main .classify_left li{
-	padding-left: 0.05rem;
-	border-left: 0.04rem solid transparent;
-
-}
-.classify_main .classify_left a{
-
+.classify_main .classify_left li a{
+	display: block;
     width: .78rem;
     line-height: .46rem;
     font-size: .15rem;
     color: #3a3a3a;
-
+	padding-left: 0.05rem;
+	border-left: 0.04rem solid transparent;
     border-right: 0;
 	text-decoration: none;
 }
-.classify_main .classify_left li:nth-of-type(1){
+.classify_main .classify_left li a.router-link-exact-active{
+	border-left: 0.04rem solid green;
+	background: #fff;
+	color:green;
+}
+/* .classify_main .classify_left li:nth-of-type(1){
 	border-left: 0.04rem solid green;
 	background: #fff;
 }
 .classify_main .classify_left li:nth-of-type(1) a{
 	color:green;
-}
+} */
+
 
 .classify_right{
 	flex:1;
@@ -109,6 +111,25 @@
 .classify_right a{
 	display: inline-block;
 	width: 0.733333rem;
+}
+.classify_right h3{
+	font-weight: 400;
+    height: .3rem;
+    line-height: .3rem;
+    text-align: center;
+    margin: 0;
+	font-size: .14rem;
+	position: relative;
+}
+.classify_right h3 span{
+	color: #222;
+}
+.classify_right h3 a{
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: .12rem;
 }
 .classify_right img{
 	width: 0.733333rem;
