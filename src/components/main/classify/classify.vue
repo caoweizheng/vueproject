@@ -40,6 +40,13 @@
 <script>
 	import '../../../css/classify.css'
 	export default{
-		
+		data(){
+			return{
+
+			}
+		},
+		mounted(){
+
+		}
 	}
 </script>
