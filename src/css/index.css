@@ -14,8 +14,8 @@ html,body{
 }
 .home_nav{
     display:flex;
-	height: .98rem;
-	box-shadow: 0 1px 1px #ccc;
+	height: .42rem;
+	box-shadow: 0 0.013333rem 0.013333rem #ccc;
 }
 .home_nav a{
     flex:1;
@@ -23,5 +23,13 @@ html,body{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-	font-size:.16rem;
+	font-size:.12rem;
+    color:#aaa;
+    text-decoration: none;
+}
+.home_nav a:hover{
+    color:green;
+}
+.home_nav a i{
+    font-size: 0.18rem
 }

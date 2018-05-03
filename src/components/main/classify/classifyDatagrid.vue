@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<li v-for="(obj,idx) in (fenlei[$route.params.data])">
+		<li v-for="(obj,idx) in (fenlei[$route.params.data || 'gyyx'])">
 			<router-link to="/list">
 				<img :src="obj.img" alt="" />
 				<span>{{obj.name}}</span>
@@ -11,7 +11,6 @@
 </template>
 
 <script>
-	
 	export default{
 		data(){
 			return{
@@ -53,7 +52,6 @@
 					// jsyl:[]
 				}
 			}
-		},
-		props:['clData']
+		}
 	}
 </script>
