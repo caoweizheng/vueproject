@@ -1,0 +1,59 @@
+#box nav{
+    display:flex;
+    padding-top:0.106667rem;
+}
+#box nav .back {
+    flex:0.25;
+    width:1.5rem;
+    display:inline-block;
+}
+
+#box nav .back .fa{
+    color:#76a741;
+    font-size:20px;
+    padding-left: 0.3rem;
+    line-height: 0.64rem;
+}
+
+#box nav .login_text {
+    flex:0.5;
+    text-overflow: ellipsis;
+    font-size:0.186667rem;
+    text-align: center;
+}
+#box nav .login_text span{
+    color:#75a739;
+    line-height: 0.68rem;
+}
+#box .top_r{
+    flex:0.25;
+}
+.account-login-form{
+    position:absolute;
+    width: 100%;
+    top:40%;
+    padding:0 8%;
+}
+.form-group{
+    display:flex;
+    width: 100%;
+    border-bottom:0.013333rem solid #fff;
+    padding:0 0 0.106667rem 0;
+}
+.form-group i{
+    font-size:0.266667rem;
+    display:inline-block;
+    color:#878787;
+    margin-right:0.106667rem;
+}
+.form-group .form-control{
+    border:0 none;
+    font-size:0.133333rem;
+    height:0.266667rem;
+}
+.btn{
+    width: 100%;
+    margin:0.666667rem 0 0.2rem;
+    font-size:0.213333rem;
+    line-height: 0.32rem;
+}

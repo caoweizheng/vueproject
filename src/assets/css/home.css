@@ -1,92 +1,92 @@
 
     .items{
         width: 100%;
-        min-height: 1.7rem;
+        min-height: 2.266667rem;
         background: #f6f6f6;
     }
-    .item{background: #fff;border-top: .08rem solid #f6f6f6;}
+    .item{background: #fff;border-top: 0.106667rem solid #f6f6f6;}
     .title{
-        height: .64rem;
-        line-height: .64rem;
+        height:0.853333rem;
+        line-height: 0.853333rem;
     }
     .title a{
         display: block;
         width: 100%;
         height: 100%;
         text-align: center;
-        font-size: .14rem;
+        font-size: 0.186667rem;
         color: #333;
     }
-    .title a h3{display: inline-block;font-size: .17rem;}
+    .title a h3{display: inline-block;font-size:0.226667rem;}
     .title a i{display: inline-block;}
-    .itemsBox{min-height: 1.7rem; overflow: hidden; }
+    .itemsBox{min-height: 2.266667rem; overflow: hidden; }
     .itemAd{
         width: 100%;
-        height: 1.6rem;
+        height:2.133333rem;
     }
     .itemAd img{width: 100%;height: 100%;}
     .itemDiv{
-        width: 1.04rem;
-        height: 1.45rem;
-        padding: .1rem .08rem .15rem;
+        width:1.386667rem;
+        height:1.933333rem;
+        padding: 0.133333rem 0.010667rem 0.2rem;
     }
     .imgBox{
         display: block;
         margin: 0 auto;
-        width: .96rem;
-        height: 1rem;
+        width: 1.28rem;
+        height: 1.333333rem;
         position: relative;
     }
     .imgBox img{width: 100%;height: 100%;}
     .imgBox span{
         display: block;
-        width: .14rem;
-        height: .3rem;
+        width: 0.186667rem;
+        height: 0.04rem;
         position: absolute;
         left: 0;
         top: 0;
         border: 1px solid #333;
-        border-radius: .02rem;
+        border-radius:0.026667rem;
         color: #333;
-        font-size: .08rem;
-        line-height: .14rem;
+        font-size: 0.106667rem;
+        line-height: 0.186667rem;
         text-align: center;
     }
     .msg{
-        font-size: .13rem;
+        font-size: 0.186667rem;
         color: #3a3a3a;
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        margin-top: .06rem;
+        margin-top: 0.08rem;
     }
     .price{
         width: 100%;
-        height: .48rem;
+        height:0.64rem;
         position: relative;
     }
     .price span{
         display: block;
         color: #ff8000;
         width: 100%;
-        height: .2rem;
+        height:0.266667rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         text-align: left;
-        font-size: .12rem;
+        font-size: 0.16rem;
     }
     .price i{
         display: block;
-        width: .16rem;
-        height: .16rem;
-        line-height: .16rem;
+        width: 0.213333rem;
+        height: 0.213333rem;
+        line-height:0.213333rem;
         text-align: center;
         color: #ff8000;
         border: 1px solid #ccc;
         border-radius: 50%;
         position: absolute;
-        right: .02rem;
-        top: .01rem;
+        right:0.026667rem;
+        top: 0.013333rem;
     }
