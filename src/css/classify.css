@@ -5,44 +5,44 @@
 
 }
 .search{
-	height: 98px;
-    border:1px solid #ddd;
+	height: 1.306667rem;
+    border:0.266667rem solid #ddd;
     background: #F8F8F8;
-    padding: 20px;
+    padding: 0.166667rem;
 }
 .search span{
 	background: #eee;
 	display: inline-block;
-	height: 58px;
+	height: 0.773333rem;
 	width: 100%;
-	border-radius: 15px;
+	border-radius: 0.2rem;
 	text-align: center;
-	line-height: 58px;
-	font-size: 28px;
+	line-height: 0.773333rem;
+	font-size: 0.373333rem;
 }
 .classify_main{
 	flex:1;
 	display:flex;
 }
 .classify_main .classify_left{
-	width: 180px;
+	width: 2.4rem;
 	background: #F5F5F5;
 }
 .classify_main .classify_left li{
 	text-align: center;
-	margin: 5px 0;
-	height: 70px;
-	line-height: 70px;
+	margin: 0.066667rem 0;
+	height: 0.933333rem;
+	line-height: 0.933333rem;
 }
 .classify_main .classify_left a{
-	font-size: 30px;
+	font-size: 0.4rem;
 	color:#999;
 	text-decoration: none;
 }
 
 .classify_main .classify_left li:hover{
 	background: #fff;
-	border-left: 3px solid green;
+	border-left: 0.04rem solid green;
 }
 .classify_main .classify_left li:hover a{
 	color:green;
@@ -53,12 +53,12 @@
 .classify_right li{
 	float: left;
 	list-style: none;
-	margin-left: 20px;
+	margin-left: 0.266667rem;
 	text-align: center;
 }
 .classify_right img{
-	width: 120px;
-	margin-bottom: 5px;
+	width: 1.6rem;
+	margin-bottom: 0.066667rem;
 }
 .classify_right span{
 	color:#999
