@@ -21,6 +21,7 @@ import register from '../components/register/register.vue'
 
 import classifyDatagrid from '../components/main/classify/classifyDatagrid.vue';
 
+
 const router = new VueRouter({
 	routes:[
 		{path:'/mlogin',component:login,name:'mlogin'},
