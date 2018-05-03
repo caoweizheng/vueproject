@@ -4,6 +4,7 @@
     flex-direction: column;
 
 }
+
 /* .c_search{
 	position: fixed;
     top: 0;
@@ -46,6 +47,7 @@
 	height: .42rem;
  */
 .c_search{
+
     top: 0;
     left: 0;
     width: 100%;

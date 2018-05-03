@@ -7,9 +7,11 @@
 		<main class="classify_main">
 			<div class="classify_left">
 				<ul>
+
 					<li v-for="obj in menus" :key="obj.path">
 						<router-link :to="obj.path">{{obj.text}}</router-link>
 					</li>					
+
 				</ul>
 			</div>
 			<div class="classify_right">

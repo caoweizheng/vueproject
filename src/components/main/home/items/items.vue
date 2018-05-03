@@ -9,7 +9,7 @@
             </div>
             <div class="swiper-container itemsBox">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide itemDiv" v-for="obj in itemData01" :key="obj.title" :data-id="obj._id">
+                    <div class="swiper-slide itemDiv" v-for="obj in itemData01" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
                         <a href="#" class="imgBox">
                             <img :src="obj.image" :alt="obj.title">
                             <span>预售</span>
@@ -37,7 +37,7 @@
             </div>
             <div class="swiper-container itemsBox">
                 <div class="swiper-wrapper">
-                   <div class="swiper-slide itemDiv" v-for="obj in itemData02" :key="obj.title" :data-id="obj._id">
+                   <div class="swiper-slide itemDiv" v-for="obj in itemData02" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
                         <a href="#" class="imgBox">
                             <img :src="obj.image" :alt="obj.title">
                             <span>预售</span>
@@ -58,7 +58,7 @@
             </div>
             <div class="swiper-container itemsBox">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide itemDiv" v-for="obj in itemData03" :key="obj.title" :data-id="obj._id">
+                    <div class="swiper-slide itemDiv" v-for="obj in itemData03" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
                         <a href="#" class="imgBox">
                             <img :src="obj.image" :alt="obj.title">
                             <span>预售</span>
@@ -79,7 +79,7 @@
             </div>
             <div class="swiper-container itemsBox">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide itemDiv" v-for="obj in itemData04" :key="obj.title" :data-id="obj._id">
+                    <div class="swiper-slide itemDiv" v-for="obj in itemData04" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
                         <a href="#" class="imgBox">
                             <img :src="obj.image" :alt="obj.title">
                             <span>预售</span>
@@ -103,6 +103,7 @@
     import '../../../../assets/css/swiper.min.css';
     import Swiper from '../../../../assets/js/swiper.min.js';
     import http from '../../../../assets/js/httpclient.js';
+
     export default {
         data () {
             return {
@@ -113,9 +114,15 @@
                 
             }
         },
+
+        methods:{
+            toDetils(item){
+                this.$router.push({name:'detali',query:{pid:item}});   
+            }
+        },
         mounted(){
             var self = this;
-            http.get('http://10.3.133.83:8888/getProduct').then((res) => {
+            http.get('getProduct').then((res) => {
                 // console.log(res.data.length);
                 for(var i=0;i<res.data.length;i++){
                     if(res.data[i].target_type=='2'){
