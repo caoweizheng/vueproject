@@ -1,0 +1,14 @@
+.home_main{
+    display: flex;
+    padding-top: 0.4rem;
+}
+.main_user {
+    display:flex;
+}
+.main_tel i{
+    width: 1.173333rem;
+    height: 0.933333rem;
+}
+.main_tel span{
+    font-size: 0.16rem;
+}
