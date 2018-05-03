@@ -44,7 +44,7 @@ module.exports = {
     },
     async update(_collection,proId,_data){
         try{
-            let res = await db.collection(_collection).updateOne({'_id':new ObjectID(proId)},_data);
+            let res = await db.collection(_collection).updateOne(proId,_data);
             // console.log(res)
                  
             return apiResult(res.result.n>0,res); 

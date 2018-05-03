@@ -39,6 +39,11 @@
                 <span><i class="fa fa-check-circle-o"></i>果园标准</span>
                 <span><i class="fa fa-check-circle-o"></i>全球直采</span>
             </div>
+            <div class="d_main4">
+                <p>评价(5385)
+                    <span>98%好评 ></span>
+                </p>
+            </div>
         </div>
         <div id="d_footer">
             <div class="d_footer1">

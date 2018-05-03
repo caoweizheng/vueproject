@@ -8,7 +8,7 @@
         </div>
         <div class="rec_items">
             <a href="#" v-for="obj in recData" :key="obj.title" :data-id="obj._id">
-                <div class="img_box">
+                <div class="img_box" @click="toDetils(obj._id)">
                     <img :src="obj.image" :alt="obj.title">
                     <span>预售</span>
                 </div>
@@ -120,9 +120,16 @@
                 recData:[]
             }
         },
+
+        methods:{
+            toDetils(item){
+                this.$router.push({name:'detali',query:{pid:item}});
+                     
+            }
+        },
         mounted(){
             var self = this;
-            http.get('http://10.3.133.83:8888/getProduct').then((res) => {
+            http.get('getProduct').then((res) => {
                 console.log(res.data);
                 var data = res.data.data;
                 for(var i=0;i<data.length;i++){

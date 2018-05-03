@@ -4,7 +4,6 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-
 import home from '../components/main/home/home.vue';
 import car from '../components/main/car/car.vue';
 import classify from '../components/main/classify/classify.vue';
@@ -23,14 +22,21 @@ import register from '../components/register/register.vue'
 import classifyDatagrid from '../components/main/classify/classifyDatagrid.vue';
 
 
+
 import classifyDatagrid2 from '../components/main/classify/classifyDatagrid2.vue';
 
 const router = new VueRouter({
 	routes:[
+		// 后端登录
 		{path:'/mlogin',component:login,name:'mlogin'},
+		// 前端登录
 		{path:'/userlogin',component:userlogin,name:'userlogin'},
+
 		{path:'/detail',component:detail,name:'detail'},
+
+		// 注册
 		{path:'/register',component:register,name:'register'},
+		// 后台管理
 		{path:'/manager',component:manager,name:'manager',children:[
 			{path:'/userlist',component:users,name:'users'},
 			{path:'/goodslist',component:goodslist,name:'goodslist'}

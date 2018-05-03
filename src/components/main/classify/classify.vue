@@ -8,7 +8,7 @@
 			<div class="classify_left">
 				<ul>
 					<li>
-						<router-link to="/gyyx/gyyx">果园优选</router-link>
+						<router-link to="/gyyx/gyyx" class="first">果园优选</router-link>
 					</li>
 					<li>
 						<router-link to="/gyyx/gyyx">新鲜水果</router-link>
@@ -25,9 +25,6 @@
 					<li>
 						<router-link to="/gyyx/gyyx">酒水饮料</router-link>
 					</li>
-					<li>
-						<router-link to="/classify/jsyl">酒水饮料</router-link>
-					</li> -->
 				</ul>
 			</div>
 			<div class="classify_right">
