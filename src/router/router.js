@@ -35,8 +35,12 @@ const router = new VueRouter({
 			{path:'/car',component:car,name:'car'},
 			{path:'/classify',component:classify,name:'classify',children:[
 
-				{path:'/gyyx',component:classifyDatagrid},
-				{path:'/xxsg',component:classifyDatagrid}
+				{path:'gyyx',component:classifyDatagrid},
+				{path:'xxsg',component:classifyDatagrid},
+				{path:'xxsp',component:classifyDatagrid},
+				{path:'lygh',component:classifyDatagrid},
+				{path:'ctbj',component:classifyDatagrid},
+				{path:'jsyl',component:classifyDatagrid}
 			]},
 			{path:'/my',component:my,name:'my'}
 

@@ -47,12 +47,12 @@
         height: 100%;
     }
     .slideLi{
-        width:96%;
+        width:100%;
         height:.96rem;
         padding: .04rem .06rem .04rem;
     }
     .slideLi li{
-        width: 1.74rem;
+        width: 1.8rem;
         height: .85rem;
         float: left;
         padding: 0 .03rem;
@@ -94,14 +94,15 @@
          mounted(){
             var self = this;
             http.get('http://10.3.133.83:8888/getProduct').then((res) => {
-                // console.log(res.data.length);
-                for(var i=0;i<res.data.length;i++){
-                    if(res.data[i].target_type=='1'){
-                        self.slideData.push(res.data[i]);
+                console.log(res.data.data);
+                var data = res.data.data;
+                for(var i=0;i<data.length;i++){
+                    if(data[i].target_type=='1'){
+                        self.slideData.push(data[i]);
                         
                     }
                 }
-                // console.log(self.slideData.length);
+                console.log(self.slideData.length);
             });
             this.swiper.slideTo(1, 5000, false);
         },

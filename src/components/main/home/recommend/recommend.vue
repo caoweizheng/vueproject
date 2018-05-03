@@ -71,8 +71,9 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size: .17rem;
-        margin-bottom: .05rem
+        font-size: .16rem;
+        margin-bottom: .05rem;
+        color: #222;
     }
     .desc p{
         white-space: nowrap;
@@ -122,10 +123,11 @@
         mounted(){
             var self = this;
             http.get('http://10.3.133.83:8888/getProduct').then((res) => {
-                // console.log(res.data.length);
-                for(var i=0;i<res.data.length;i++){
-                    if(res.data[i].target_type=='6'){
-                        self.recData.push(res.data[i]);
+                console.log(res.data);
+                var data = res.data.data;
+                for(var i=0;i<data.length;i++){
+                    if(data[i].target_type=='6'){
+                        self.recData.push(data[i]);
                         
                     }
                 }

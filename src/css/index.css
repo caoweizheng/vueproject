@@ -14,8 +14,10 @@ html,body{
 }
 .home_nav{
     display:flex;
-	height: .98rem;
-	box-shadow: 0 1px 1px #ccc;
+    height: .42rem;
+    align-items: center;
+    box-shadow: 0 1px 1px #ccc;
+    border-top: .03rem solid #d6d6d6;
 }
 .home_nav a{
     flex:1;
@@ -23,5 +25,12 @@ html,body{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-	font-size:.16rem;
+    font-size:.1rem;
+    color: #898989;
+}
+.home_nav a i{
+    font-size: .24rem;
+}
+.router-link-exact-active{
+    color: #65a032;
 }
