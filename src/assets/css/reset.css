@@ -20,13 +20,13 @@ input{outline:none;}
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-html{
+/* html{
   font-size: 625%;
   
 }
 body{
   font-size: .16rem;
-}
+} */
 /*input::-webkit-input-placeholder {*/
   /*/!* placeholder颜色  *!/*/
   /*color: #ffffff;*/

@@ -2,14 +2,14 @@
     <div id="location-wraper">
         <nav class="l_nav">
             <div class="head">
-                <a href="javascript:;" class="back">
+                <a href="javascript:;" class="back" @click="goHome">
                     <i class="iconfont">&times;</i>
                 </a>
                 <h3>选择收货地址</h3>
                 <a href="#" class="next">新增地址</a>
             </div>
-            <div class="search">
-                <div class="searchBox">
+            <div class="l_search">
+                <div class="l_searchBox">
                     <i class="iconfont">&#xe60c;</i>
                     <input type="text" placeholder="请输入收货地址">
                 </div>
@@ -59,7 +59,6 @@
         width: 100%;
         height: .46rem;
         display: flex;
-        display: flex;
         align-items: center;
         justify-content: space-between;
     }
@@ -80,7 +79,7 @@
     .back i{
         position: absolute;
         left: .08rem;
-        top: .3rem;
+        top: .23rem;
         display: inline-block;
         font-size: .40rem;
         height: .2rem;
@@ -89,18 +88,19 @@
     .next{
         width: .88rem;
         height: 100%;
+        line-height: .26rem;
         text-align: right;
         margin-right: .08rem;
         color: #76a741;
         font-size: .14rem;
     }
-    .search{
+    .l_search{
         background-color: #fff;
         padding: 0 .1rem .1rem;
         box-sizing: border-box;
         position: relative;
     }
-    .searchBox{
+    .l_searchBox{
         width: 100%;
         height: .33rem;
         line-height: .33rem;
@@ -112,7 +112,7 @@
         color: #878787;
         font-size: .14rem
     }
-    .searchBox i{
+    .l_searchBox i{
         display: inline-block;
         height: .2rem;
         font-size: .2rem;
@@ -120,11 +120,12 @@
         position: relative;
         line-height: .32rem;
     }
-    .searchBox input{
+    .l_searchBox input{
+        height: 100%;
         border: none;
         background: #eee;
     }
-    .search span{
+    .l_search span{
         display: inline-block;
         height: .33rem;
         line-height: .33rem;
@@ -133,7 +134,7 @@
         top: 0;
         color: #929292;
     }
-    .search span i{
+    .l_search span i{
         display: inline-block;
         height: .2rem;
         color: #3a3a3a;
@@ -174,7 +175,15 @@
 
 <script>
     export default {
+        methods:{
+            goHome:function(){
+                this.$parent.$refs.indexBox.style.display = 'block';
+                this.$parent.$refs.locationBox.style.display = 'none';
+                this.$parent.$parent.$refs.footerNav.style.display = 'block';
+                window.location.reload();
 
+            }
+        }
     }
 
 </script>

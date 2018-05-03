@@ -1,7 +1,7 @@
 <template>
     <div id="search-wrapper">
         <div class="sear-nav">
-            <div class="s_back">
+            <div class="s_back" @click="goHome">
                 <i class="iconfont">&#xe648;</i>
                 <span>返回</span>
             </div>
@@ -30,7 +30,6 @@
 
 <style>
     #search-wrapper{
-        display: none;
         width: 100%;
         height: 100%;
     }
@@ -116,6 +115,13 @@
 
 <script>
     export default {
-
+        methods:{
+            goHome:function(){
+                this.$parent.$refs.indexBox.style.display = 'block';
+                this.$parent.$refs.searchBox.style.display = 'none';
+                this.$parent.$parent.$refs.footerNav.style.display = 'block';
+                window.location.reload();
+            }
+        }
     }
 </script>

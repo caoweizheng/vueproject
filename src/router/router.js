@@ -39,7 +39,7 @@ const router = new VueRouter({
 			{path:'/classify',component:classify,name:'classify',children:[
 
 				{path:'/',component:classifyDatagrid},
-				{path:'/gyyx/:data',component:classifyDatagrid},
+				{path:'/classify/:data',component:classifyDatagrid},
 
 			]},
 			{path:'/my',component:my,name:'my'}
