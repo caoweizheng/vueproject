@@ -1,5 +1,6 @@
 const db = require('../tool/db.js');
 const apiResult = require('../tool/apiResult.js')
+const ObjectID = require('mongodb').ObjectID;
 module.exports = {
 
 	reg(app){
@@ -33,6 +34,16 @@ module.exports = {
 
 		}),
 
+		app.get('/detilsPro',async (req,res) => {
+
+			let proId = req.query.proId;
+
+			let result = await db.select('products',{'_id':new ObjectID(proId)});
+
+			res.send(result);
+
+		}),
+
 		app.post('/updatePro',async (req,res) => {
 
 			let conId = req.body.proId;
@@ -46,7 +57,7 @@ module.exports = {
 				target_type: req.body.type
 			}
 
-			let result = await db.update('products',conId,{$set:data});
+			let result = await db.update('products',{'_id':new ObjectID(conId)},{$set:data});
 			res.send(result)
 		})
 	}
