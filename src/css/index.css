@@ -14,6 +14,7 @@ html,body{
 }
 .home_nav{
     display:flex;
+
     height: .42rem;
     align-items: center;
     box-shadow: 0 1px 1px #ccc;
@@ -25,6 +26,7 @@ html,body{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+
     font-size:.1rem;
     color: #898989;
 }
@@ -33,4 +35,5 @@ html,body{
 }
 .router-link-exact-active{
     color: #65a032;
+
 }
