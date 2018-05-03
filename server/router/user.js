@@ -59,6 +59,15 @@ module.exports = {
             let result = await db.select('users');
                  
             res.send(apiResult(true,result.data,''))
+      }),
+      app.post('/delUser',async (req,res) => {
+
+            let userId = req.body.uId;
+
+            let result = await db.remove('users',userId);
+                 
+            res.send(result);
       })
+
 	}
 }

@@ -20,6 +20,11 @@ import userlogin from '../components/login/userlogin.vue'
 
 import register from '../components/register/register.vue'
 
+import classifyDatagrid from '../components/main/classify/classifyDatagrid.vue';
+
+
+import classifyDatagrid2 from '../components/main/classify/classifyDatagrid2.vue';
+
 const router = new VueRouter({
 	routes:[
 		{path:'/mlogin',component:login,name:'mlogin'},
@@ -33,10 +38,16 @@ const router = new VueRouter({
 		{path:'/',component:main,name:'main',children:[
 			{path:'/home',component:home,name:'home'},
 			{path:'/car',component:car,name:'car'},
-			{path:'/classify',component:classify,name:'classify'},
+			{path:'/classify',component:classify,name:'classify',children:[
+
+				{path:'/',component:classifyDatagrid},
+				{path:'/gyyx/:data',component:classifyDatagrid},
+
+			]},
 			{path:'/my',component:my,name:'my'}
 
-		]}
+		]},
+		{path:'/inClassify',component:classifyDatagrid2}
 	]
 })
 
