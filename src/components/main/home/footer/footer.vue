@@ -33,8 +33,8 @@
 <style>
     .footer{
         width: 100%;
-        height: .42rem;
-        border-top: .03rem solid #d6d6d6;
+        height:0.56rem;
+        border-top:0.04rem solid #d6d6d6;
         background: #fff;
         position: fixed;
         bottom: 0;
@@ -51,11 +51,11 @@
     }
     .footer a i{
         display: block;
-        font-size: .22rem;
-        height: .24rem;
+        font-size:0.293333rem;
+        height: 0.32rem;
     }
     .footer a span{
-        font-size: .12rem;
+        font-size:0.16rem;
     }
 </style>
 
