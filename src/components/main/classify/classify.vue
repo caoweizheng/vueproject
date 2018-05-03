@@ -25,6 +25,9 @@
 					<li>
 						<router-link to="/gyyx/gyyx">酒水饮料</router-link>
 					</li>
+					<li>
+						<router-link to="/classify/jsyl">酒水饮料</router-link>
+					</li> -->
 				</ul>
 			</div>
 			<div class="classify_right">
