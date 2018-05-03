@@ -7,6 +7,7 @@ Vue.use(VueRouter);
 import home from '../components/main/home/home.vue';
 import car from '../components/main/car/car.vue';
 import classify from '../components/main/classify/classify.vue';
+import detail from '../components/detail/detail.vue';
 import my from '../components/main/my/my.vue';
 import login from '../components/Backstage/login/login.vue';
 import manager from '../components/Backstage/manager/manager.vue';
@@ -30,6 +31,9 @@ const router = new VueRouter({
 		{path:'/mlogin',component:login,name:'mlogin'},
 		// 前端登录
 		{path:'/userlogin',component:userlogin,name:'userlogin'},
+
+		{path:'/detail',component:detail,name:'detail'},
+
 		// 注册
 		{path:'/register',component:register,name:'register'},
 		// 后台管理
