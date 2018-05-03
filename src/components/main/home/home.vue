@@ -1,18 +1,18 @@
 <template>
   <div id="home_wrapper">
-      <div class="indexBox">
+      <div class="indexBox" ref="indexBox">
             <hd></hd>
             <slide></slide>
             <items></items>
             <recommend></recommend>
             <!-- <ft></ft> -->
       </div>
-      <div class="locationBox">
+      <div class="locationBox" ref="locationBox">
           <local></local>
       </div>
-        <div class="searchBox">
-            <search></search>
-        </div>
+    <div class="searchBox" ref="searchBox">
+        <search></search>
+    </div>
   </div>
 </template>
 <style>
