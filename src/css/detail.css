@@ -58,7 +58,6 @@ html,body{
     height:0.466667rem;
 }
 #d_header .d3 ul{
-    overflow:hidden;
     width:1.666667rem;
     height:1.666667rem;
     position:absolute;
@@ -88,14 +87,14 @@ html,body{
     flex:1;
     overflow-x: hidden;
 }
-#d_main img{
-    display:block;
+#d_main .d_main1>img{
+    /*display:block;*/
     width:5.0rem;
     height:5.0rem;
 }
 #d_main .d_main1{
     text-align:center;
-    padding:0.133333rem;
+    padding-bottom:0.133333rem;
     border-bottom:0.133333rem solid #F5F5F5;
 }
 #d_main .d_main1 p{
@@ -112,7 +111,6 @@ html,body{
 #d_main .d_main1 .price1{
     font-size:0.186667rem;
     color:#FF8000;
-    padding-bottom:0.106667rem;
 }
 #d_main .d_main1 .price1 span{
     font-size:0.293333rem;
@@ -121,7 +119,8 @@ html,body{
     height:0.426667rem;
 }
 #d_main .d_main1 .volume1 span{
-    padding:0.106667rem 0.2rem;
+    padding:5px;
+    font-size:0.213333rem;
     background:#FF8000;
     color:#ffffff;
     border-radius:0.066667rem;
@@ -153,14 +152,15 @@ html,body{
     padding-left:0.133333rem;
 }
 #d_main .d_main4 p{
-    font-size:12px;
-    line-height:46px;
+    font-size:0.16rem;
+    line-height:0.613333rem;
     color:#B4B4B4;
-    padding-left:10px;
+    padding-left:0.133333rem;
+    border-bottom:0.013333rem solid #E7E7E7;
 }
 #d_main .d_main4 p span{
     color:#FF804F;
-    padding-left:230px;
+    padding-left:3.066667rem;
 }
 
 
@@ -180,12 +180,12 @@ html,body{
     bottom:0.066667rem;
 }
 #d_footer .d_footer1 i{
-    font-size:0.333333rem;
+    font-size:0.4rem;
     position:absolute;
     top:0.133333rem;
-    left:0.173333rem;
+    left:0.133333rem;
 }
-#d_footer button{
+#d_footer .btn_d{
     width:2.4rem;
     height:0.6rem;
     position:absolute;

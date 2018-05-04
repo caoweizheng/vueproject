@@ -8,7 +8,7 @@
             </div>
             <div class="top_r"></div>
         </nav>
-        <form class="account-login-form">
+        <div class="account-login-form">
             <div class="form-group">
                 <i class="fa fa-mobile"></i>
                 <input type="tel" class="form-control" v-model="phone" placeholder="手机号">
@@ -21,7 +21,7 @@
             </div>
             <button type="submit" class="btn btn-success btn-lg" @click="login">Sign in</button>
             <router-link to="/register">还没有账号?赶紧注册一个吧!</router-link>
-        </form>      
+        </div>      
     </div>
 </template>
 <script>
@@ -37,7 +37,7 @@
 		methods:{
 			login(){
 				http.post('userlogin',{phone:this.phone,password:this.password}).then((res) => {
-					console.log(res)
+					console.log('userlogin',res.data.state)
 					     
 					if(res.data.state){
 
