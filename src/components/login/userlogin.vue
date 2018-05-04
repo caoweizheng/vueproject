@@ -1,26 +1,31 @@
 <template>
 
 	<div id="box">
-		<h3>Login</h3>
-          <div class="form-group">
-            <input type="text" class="form-control" v-model="phone" placeholder="username">
-            <span id="helpBlock2" class="error-block" ></span>
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control" v-model="password" placeholder="Password">
-            <span id="helpBlock2" class="help-block usertips" ></span>
-          </div>
-          <button type="submit" class="btn btn-success btn-lg" @click="login">Sign in</button>
-          <router-link to="/register">还没有账号?赶紧注册一个吧!</router-link>  
+        <nav>
+            <div class="back"><i class="fa fa-angle-left"></i></div>
+            <div class="login_text">
+                <span>账号密码登录</span>
+            </div>
+            <div class="top_r"></div>
+        </nav>
+        <form class="account-login-form">
+            <div class="form-group">
+                <i class="fa fa-mobile"></i>
+                <input type="tel" class="form-control" v-model="phone" placeholder="手机号">
+                <span id="helpBlock2" class="error-block" ></span>
+            </div>
+            <div class="form-group">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="form-control" v-model="password" placeholder="密码">
+                <span id="helpBlock2" class="help-block usertips" ></span>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg" @click="login">Sign in</button>
+            <router-link to="/register">还没有账号?赶紧注册一个吧!</router-link>
+        </form>      
     </div>
 </template>
-<style type="text/css">
-	#box{
-		width: 400px;
-		margin: 0 auto;
-	}
-</style>
 <script>
+    import '../../css/userlogin.css'
 	import http from '../../utils/httpClient.js'
 	export default{
 		data(){

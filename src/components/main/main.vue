@@ -3,7 +3,7 @@
     <div class="home_main">
       <router-view></router-view>
     </div>
-    <div class="home_nav">
+    <div class="home_nav" ref="footerNav">
       <router-link to="/home"><i class='fa fa-home'></i>首页</router-link>
       <router-link to="/classify"><i class='fa fa-window-restore'></i>分类</router-link>
       <router-link to="/car"><i class='fa fa-cart-plus'></i>购物车</router-link>

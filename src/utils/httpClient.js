@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = 'http://10.3.133.83:8888/'
+const baseUrl = 'http://10.3.133.83:8888/';
 // const baseUrl = 'http://localhost:8888/';
 
 let filterUrl = (_url) => {

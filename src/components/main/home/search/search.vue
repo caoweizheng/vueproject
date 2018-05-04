@@ -1,7 +1,7 @@
 <template>
     <div id="search-wrapper">
         <div class="sear-nav">
-            <div class="s_back">
+            <div class="s_back" @click="goHome">
                 <i class="iconfont">&#xe648;</i>
                 <span>返回</span>
             </div>
@@ -28,94 +28,17 @@
     </div>
 </template>
 
-<style>
-    #search-wrapper{
-        display: none;
-        width: 100%;
-        height: 100%;
-    }
-    .sear-nav{
-        width: 100%;
-        height: auto;
-        background-color: #fff;
-        border-bottom: 1px solid #d8d8d8;
-        padding: .1rem 0; 
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .sear-nav i{
-        display: inline-block;
-        height: .25rem;
-        font-size: .2rem;
-    }
-    .s_back{
-        color: #64a131;
-        font-size: .14rem;
-        width: auto;
-        height: .32rem;
-        line-height: .32rem;
-        margin-right: .06rem;
-    }
-    .sear_input{
-        flex: 1;
-        box-sizing: border-box;
-        position: relative;
-        background-color: #eee;
-        border-radius: .05rem;
-        color: #878787;
-        font-size: .14rem;
-    }
-    .sear_input i{
-        margin: 0 .05rem;
-    }
-    .sear_input input{
-        border: none;
-        background: #eee;
-    }
-    .sear_btn{
-        box-sizing: border-box;
-        height: .32rem;
-        line-height: .32rem;
-        color: #64a131;
-        font-size: .16rem;
-        padding: 0 .06rem;
-        white-space: nowrap;
-    }
-    .hot{
-        margin-top: .53rem;
-        padding: 0 .1rem;
-        height: auto;
-        overflow: auto;
-    }
-    .hot h5{
-        width: 100%;
-        height: .42rem;
-        line-height: .42rem;
-        color: #878787;
-        font-weight: 100;
-    }
-    .keyword a{
-        color: #6c6c6c;
-        display: inline-block;
-        padding: .07rem .08rem;
-        margin: .1rem .04rem 0;
-        background-color: #f1f1f1;
-        border-radius: .05rem;
-        max-width: 1.8rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-</style>
-
 
 <script>
+    import '../../../../assets/css/home.css';
     export default {
-
+        methods:{
+            goHome:function(){
+                this.$parent.$refs.indexBox.style.display = 'block';
+                this.$parent.$refs.searchBox.style.display = 'none';
+                this.$parent.$parent.$refs.footerNav.style.display = 'block';
+                window.location.reload();
+            }
+        }
     }
 </script>
