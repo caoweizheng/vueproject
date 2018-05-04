@@ -7,9 +7,11 @@
             </a>
         </div>
         <div class="rec_items">
+
             <a href="#" v-for="obj in recData" :key="obj.title" :data-id="obj._id">
                 <div class="img_box" >
                     <img :src="obj.image" :alt="obj.title" @click="toDetils(obj._id)">
+
                     <span>预售</span>
                 </div>
                 <div class="desc">
@@ -17,7 +19,7 @@
                     <p>{{obj.subtitle}}</p>
                     <div class="price rec_price">
                         <span>￥<em class="money">{{obj.price}}</em><em>/{{obj.volume}}</em></span>
-                        <i class="add" ref="add_car" @click="addCar(obj._id)">+</i>
+                        <i class="add" @click="addCar(obj._id)">+</i>
                     </div>
                 </div>
             </a>

@@ -1,23 +1,26 @@
 <template>
 	
 	<div class="classify_list">
-		<div class="classify_list_title">
-			<i class="list_left fa fa-chevron-left"></i>
-			<p class="list_title">{{lisData[$store.state.type]['title']}}</p>
-			<i class="list_search fa fa-search"></i>
-		</div>
-			
-		<div class="swiper-wrapper ">
-	        <ul class="swiper-slide list_tab">
-	            <li  v-for="(item,idx) in (lisData[$store.state.type]['data'])">
-	                <span>{{item}}</span>
-	            </li>
-	        </ul>
-			
-		</div>
+		<div class="list_header">
+			<div class="classify_list_title">
+				<i class="list_left fa fa-chevron-left" @click="goClassify"></i>
+				<p class="list_title">{{lisData[$store.state.type]['title']}}</p>
+				<i class="list_search fa fa-search"></i>
+			</div>
+			<div class="swiper-container menu-swiper swiper-container-horizontal">		
+		        <ul class="swiper-wrapper list_tab">
+		        	<li class="swiper-slide all" style="width: 1.093333rem;">
+		        		<span>全部</span>
+		        	</li>
+		            <li class="swiper-slide" style="width: 1.093333rem;"  v-for="(item,idx) in (lisData[$store.state.type]['data'])">
+		                <span>{{item}}</span>
+		            </li>
+		        </ul>		
+			</div>
+		</div>	
+		
 
-		<div>
-
+		<div class="listBox">
 			<listDatagrid></listDatagrid>
 		</div>
 
@@ -50,21 +53,21 @@
 		mounted(){  
 	         var swiper = new Swiper('.swiper-container', {
 	        	lopper:true,
-		      slidesPerView: 3,
-		      spaceBetween: 30,
-		      slidesOffsetBefore : 100,
-		      //     paginationClickable: true,
-		    //……
-		    // observer:true,//修改swiper自己或子元素时，自动初始化swiper
-		    // observeParents:true,//修改swiper的父元素时，自动初始化swiper
-		      pagination: {
-		        el: '.swiper-pagination',
-		        clickable: true
-		      },
+		      	slidesPerView: 5,
+		      	slidesOffsetBefore : 100,
+		      	pagination: {
+			        el: '.swiper-pagination',
+			        clickable: true
+			      },
 		    });
 		},
 		components:{
 			listDatagrid
+		},
+		methods:{
+			goClassify:function(){
+				this.$router.push({name:'classify'});
+			}
 		}
 
 	}

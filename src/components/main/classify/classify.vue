@@ -12,14 +12,20 @@
 						<router-link :to="obj.path">{{obj.text}}</router-link>
 					</li>					
 
-				</ul>
-			</div>
-			<div class="classify_right">
-				<router-view>
-					
-				</router-view>
-			</div>
-		</main>		
+
+					</ul>
+				</div>
+				<div class="classify_right">
+					<router-view>
+						
+					</router-view>
+				</div>
+			</main>
+		</div>
+		<!-- <div class="listBox">
+			<list></list>
+		</div> -->		
+
 	</div>
 </template>
 <script>
