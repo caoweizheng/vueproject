@@ -18,9 +18,9 @@ module.exports = {
 			     
 		  }),
 
-      app.get('/getState',(req,res) => {
+      app.post('/getState',(req,res) => {
 
-        
+        res.send(apiResult(true,'token'))
       })
 
       app.post('/userlogin', async (req,res) => {
@@ -33,7 +33,8 @@ module.exports = {
 
       // check db
       let result = await db.select('users',user);
-
+            console.log('user',result.data[0].phone)
+                 
             if(result.state){                     
                let token = jwt.sign({'phone':result.data[0].phone}, '123', {
                     'expiresIn': 60*60 // 设置过期时间
