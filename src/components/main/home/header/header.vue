@@ -23,21 +23,25 @@
     .position {
         float: left;
         width: 70%;
-        padding: 0 0.2rem;
+
+        padding: 0 .0.002rem;
+
         color: #65a032;
         white-space: nowrap;
+        margin-left:0.213333rem;
     }
     .position .logo{float: left;}
     .position .logo img {
         display: inline-block;
         width: 0.68rem;
         height: 0.186667rem;
-        margin-right:0.066667rem;
+        margin-right: 0.066667rem;
     }
     .position .map{float: left;}
-    .position i{font-size:0.32rem;display: inline-block;height: 0.32rem;}
+    .position i{font-size: 0.32rem;display: inline-block;height: 0.32rem;}
     .h_search{float:right;padding: 0 0.2rem;}
-    .h_search i{font-size: 0.32rem;display: inline-block;height:0.32rem;}
+    .h_search i{font-size: 0.32rem;display: inline-block;height: 0.32rem;}
+
 </style>
 <script>
     export default {

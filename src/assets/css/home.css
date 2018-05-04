@@ -6,7 +6,9 @@
     }
     .item{background: #fff;border-top: 0.106667rem solid #f6f6f6;}
     .title{
-        height:0.853333rem;
+
+        height: 0.853333rem;
+
         line-height: 0.853333rem;
     }
     .title a{
@@ -17,18 +19,22 @@
         font-size: 0.186667rem;
         color: #333;
     }
-    .title a h3{display: inline-block;font-size:0.226667rem;}
+
+    .title a h3{display: inline-block;font-size: 0.226667rem;}
+
     .title a i{display: inline-block;}
     .itemsBox{min-height: 2.266667rem; overflow: hidden; }
     .itemAd{
         width: 100%;
-        height:2.133333rem;
+
+        height: 2.133333rem;
     }
     .itemAd img{width: 100%;height: 100%;}
     .itemDiv{
-        width:1.386667rem;
-        height:1.933333rem;
-        padding: 0.133333rem 0.010667rem 0.2rem;
+        width: 1.386667rem;
+        height: 15.266667rem;
+        padding: 0.133333rem .0.010667rem 0.2rem;
+
     }
     .imgBox{
         display: block;
@@ -41,12 +47,14 @@
     .imgBox span{
         display: block;
         width: 0.186667rem;
-        height: 0.04rem;
+
+        height: 0.4rem;
         position: absolute;
         left: 0;
         top: 0;
-        border: 1px solid #333;
-        border-radius:0.026667rem;
+        border: 0.013333rem solid #333;
+        border-radius: 0.026667rem;
+
         color: #333;
         font-size: 0.106667rem;
         line-height: 0.186667rem;
@@ -63,30 +71,40 @@
     }
     .price{
         width: 100%;
-        height:0.64rem;
+
+        height: 0.64rem;
+
         position: relative;
     }
     .price span{
         display: block;
         color: #ff8000;
         width: 100%;
-        height:0.266667rem;
+
+        height: 0.266667rem;
+
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         text-align: left;
-        font-size: 0.16rem;
+
+        font-size: 12px;
+
     }
     .price i{
         display: block;
         width: 0.213333rem;
         height: 0.213333rem;
-        line-height:0.213333rem;
+
+        line-height: 0.213333rem;
+
         text-align: center;
         color: #ff8000;
-        border: 1px solid #ccc;
+        border: 0.013333rem solid #ccc;
         border-radius: 50%;
         position: absolute;
-        right:0.026667rem;
+
+        right: 0.026667rem;
+
         top: 0.013333rem;
     }

@@ -27,20 +27,20 @@
 
 <style>
     .rec_items{
-        margin-bottom: .45rem;
+        margin-bottom: 0.6rem;
     }
     .rec_items a{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 0 .12rem 0 .25rem;
-        height: 1.6rem;
-        border-top: .005rem solid rgba(220,220,220,.8);
+        padding: 0 0.16rem 0 0.333333rem;
+        height: 2.133333rem;
+        border-top: .0.006667rem solid rgba(220,220,220,.8);
         
     }
     .img_box{
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1.6rem;
+        height: 1.6rem;
         margin: auto;
         position: relative;
         align-items: center;
@@ -48,31 +48,31 @@
     .img_box img{width: 100%;height: 100%;}
     .img_box span{
         display: block;
-        width: .14rem;
-        height: .3rem;
+        width: 0.186667rem;
+        height: 0.4rem;
         position: absolute;
         left: 0;
         top: 0;
-        border: 1px solid #333;
-        border-radius: .02rem;
+        border: 0.013333rem solid #333;
+        border-radius: 0.026667rem;
         color: #333;
-        font-size: .08rem;
-        line-height: .14rem;
+        font-size: 0.106667rem;
+        line-height: 0.186667rem;
         text-align: center;
     }
     .desc{
         flex: 1;
-        height: 1.05rem;
+        height: 1.4rem;
         margin: auto 0;
         position: relative;
-        margin-left: .25rem;
+        margin-left: 0.333333rem;
     }
     .desc h5{
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size: .16rem;
-        margin-bottom: .05rem;
+        font-size: 0.213333rem;
+        margin-bottom: 0.066667rem;
         color: #222;
     }
     .desc p{
@@ -80,7 +80,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         color: #878787;
-        margin-bottom: .37rem;
+        margin-bottom: 0.493333rem;
         text-align: justify;
         margin: 0;
     }
@@ -88,24 +88,24 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        height: .2rem;
-        line-height: .2rem;
+        height: 0.266667rem;
+        line-height: 0.266667rem;
     }
     .rec_price span{
-        font-size: .16rem;
+        font-size: 0.213333rem;
     }
     .rec_price i{
         display: block;
-        width: .24rem;
-        height: .24rem;
-        line-height: .24rem;
-        font-size: .22rem;
+        width: 0.32rem;
+        height: 0.32rem;
+        line-height: 0.32rem;
+        font-size: 0.293333rem;
         text-align: center;
         color: #ff8000;
-        border: 1px solid #ccc;
+        border: 0.013333rem solid #ccc;
         border-radius: 50%;
         position: absolute;
-        right: .05rem;
+        right: 0.066667rem;
         top: 0;
     }
 </style>

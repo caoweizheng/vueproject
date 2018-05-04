@@ -40,7 +40,7 @@
     }
     .swiper-container {
         width: 100%;
-        height: 1.36rem;
+        height: 1.813333rem;
     }
     .swiper-container img{
         width: 100%;
@@ -48,14 +48,14 @@
     }
     .slideLi{
         width:100%;
-        height:.96rem;
-        padding: .04rem .06rem .04rem;
+        height:1.28rem;
+        padding: .0.005333rem 0.08rem 0.053333rem;
     }
     .slideLi li{
-        width: 1.8rem;
-        height: .85rem;
+        width: 2.4rem;
+        height: 1.186667rem;
         float: left;
-        padding: 0 .03rem;
+        padding: 0 0.04rem;
     }
     .slideLi li a{
         display: block;
