@@ -38,7 +38,7 @@
         height: auto;
         background-color: #fff;
         border-bottom: 1px solid #d8d8d8;
-        padding: .1rem 0; 
+        padding: 0.133333rem 0; 
         position: fixed;
         left: 0;
         right: 0;
@@ -49,28 +49,28 @@
     }
     .sear-nav i{
         display: inline-block;
-        height: .25rem;
-        font-size: .2rem;
+        height: 0.333333rem;
+        font-size: 0.266667rem;
     }
     .s_back{
         color: #64a131;
-        font-size: .14rem;
+        font-size: 0.186667rem;
         width: auto;
-        height: .32rem;
-        line-height: .32rem;
-        margin-right: .06rem;
+        height: 0.426667rem;
+        line-height: 0.426667rem;
+        margin-right: 0.08rem;
     }
     .sear_input{
         flex: 1;
         box-sizing: border-box;
         position: relative;
         background-color: #eee;
-        border-radius: .05rem;
+        border-radius: 0.066667rem;
         color: #878787;
-        font-size: .14rem;
+        font-size: 0.186667rem;
     }
     .sear_input i{
-        margin: 0 .05rem;
+        margin: 0 0.066667rem;
     }
     .sear_input input{
         border: none;
@@ -78,34 +78,34 @@
     }
     .sear_btn{
         box-sizing: border-box;
-        height: .32rem;
-        line-height: .32rem;
+        height: 0.426667rem;
+        line-height: 0.426667rem;
         color: #64a131;
-        font-size: .16rem;
-        padding: 0 .06rem;
+        font-size: 0.213333rem;
+        padding: 0 0.08rem;
         white-space: nowrap;
     }
     .hot{
-        margin-top: .53rem;
-        padding: 0 .1rem;
+        margin-top: 0.706667rem;
+        padding: 0 0.133333rem;
         height: auto;
         overflow: auto;
     }
     .hot h5{
         width: 100%;
-        height: .42rem;
-        line-height: .42rem;
+        height: 0.56rem;
+        line-height: 0.56rem;
         color: #878787;
         font-weight: 100;
     }
     .keyword a{
         color: #6c6c6c;
         display: inline-block;
-        padding: .07rem .08rem;
-        margin: .1rem .04rem 0;
+        padding: 0.093333rem 0.106667rem;
+        margin: 0.133333rem 0.053333rem 0;
         background-color: #f1f1f1;
-        border-radius: .05rem;
-        max-width: 1.8rem;
+        border-radius: 0.066667rem;
+        max-width: 2.4rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
