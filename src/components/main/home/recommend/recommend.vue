@@ -37,6 +37,7 @@
 
         methods:{
             toDetils(item){
+
                 this.$router.push({name:'detali',query:{pid:item}});                
             },
             addCar(id){
@@ -44,6 +45,7 @@
                 http.post('addCar',{'proid':id}).then((res) => {
                     console.log(res);
                 });
+
 
             }
         },

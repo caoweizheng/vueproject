@@ -117,7 +117,7 @@
 
         methods:{
             toDetils(item){
-                this.$router.push({name:'detali',query:{pid:item}});   
+                this.$router.push({name:'detail',query:{pid:item}});   
             }
         },
         mounted(){
