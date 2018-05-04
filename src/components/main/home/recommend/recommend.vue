@@ -8,8 +8,8 @@
         </div>
         <div class="rec_items">
             <a href="#" v-for="obj in recData" :key="obj.title" :data-id="obj._id">
-                <div class="img_box" @click="toDetils(obj._id)">
-                    <img :src="obj.image" :alt="obj.title">
+                <div class="img_box" >
+                    <img :src="obj.image" :alt="obj.title" @click="toDetils(obj._id)">
                     <span>预售</span>
                 </div>
                 <div class="desc">
@@ -17,7 +17,7 @@
                     <p>{{obj.subtitle}}</p>
                     <div class="price rec_price">
                         <span>￥<em class="money">{{obj.price}}</em><em>/{{obj.volume}}</em></span>
-                        <i>+</i>
+                        <i class="add" ref="add_car" @click="addCar(obj._id)">+</i>
                     </div>
                 </div>
             </a>
@@ -125,13 +125,22 @@
             toDetils(item){
 
 
-                this.$router.push({name:'detali',query:{pid:item}});                
+                this.$router.push({name:'detail',query:{pid:item}});                
             },
             addCar(id){
+
+                http.post('getState',{}).then((res) => {
+                    console.log(res)
+                         
+                    if(res.data.state){
+                        http.post('addCar',{'proid':id}).then((res) => {
+                            console.log(res);
+                        });
+                    }else{
+                        this.$router.push({name:'userlogon'});
+                    }
+                })
                 
-                http.post('addCar',{'proid':id}).then((res) => {
-                    console.log(res);
-                });
 
             }
         },

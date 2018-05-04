@@ -16,6 +16,7 @@ export default {
     get(_url, _params = {}){
         document.querySelector('.markAll').style.display = 'block';
         return new Promise((resolve, reject) => {
+            console.log('tokentttttt',window.localStorage.getItem('phone'))
             axios({
                 method:'get',
                 url:filterUrl(_url),
@@ -32,12 +33,12 @@ export default {
                 }],
 
             }).then((res) => {
-                console.log(res.data.state)
-                console.log(res.data.msg)
+                // console.log(res.data.state)
+                // console.log(res.data.msg)
                      
                 if(!res.data.state && res.data.msg=='NoState'){
 
-                    router.push({name:'phome'})
+                    router.push({name:'userlogin'})
                 } else {
                     resolve(res)
                     document.querySelector('.markAll').style.display = 'none';
@@ -56,7 +57,8 @@ export default {
         // params.append('password', _params.password);
         document.querySelector('.markAll').style.display = 'block';
         return new Promise((resolve, reject) => {
-
+            console.log('tokenttttttppppp',window.localStorage.getItem('phone'))
+                 
             axios({
                 method:'post',
                 url:filterUrl(_url),
@@ -78,6 +80,8 @@ export default {
 
                     router.push({name:'userlogin'})
                 } else {
+                    console.log(res)
+                         
                     resolve(res)
                     document.querySelector('.markAll').style.display = 'none';
                     

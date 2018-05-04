@@ -38,7 +38,7 @@ app.use(session({
 // 支持跨域
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length,token, Authorization, Accept,X-Requested-With");
+    res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length,token, auth,Authorization, Accept,X-Requested-With");
     res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
     res.header("X-Powered-By",' 3.2.1')
     if(req.method=="OPTIONS") {
@@ -51,29 +51,37 @@ app.all('*', function(req, res, next) {
 const filter = (req, res ,next) => {
       
      let url = req.originalUrl;
-     if(!url == '/getState'){
+     console.log(url)
+          
+     if(!(url == '/getState')){
         return next();
+     }else{
+
+        let token = req.headers['token'];
+        console.log(token)
+             
+        
+        if(!token) {
+            console.log('notoken');
+            res.send(apiResult(false,'','NoState'));
+        } else {
+            console.log('token------------',token)
+
+            jwt.verify(token,'123',(error,result) => {
+                if(error){
+                    console.log(666)
+                         
+                    res.send(apiResult(false,'','NoState'));
+                } else {
+                    next();
+                }
+            })
+        }
      }
 
-    let token = req.headers['token'];
-    
-    if(!token) {
-        console.log('notoken');
-        res.send(apiResult(false,'','NoState'));
-    } else {
-        console.log('hastoken')
-
-        jwt.verify(token,'123',(error,result) => {
-            if(error){
-                res.send(apiResult(false,'','NoState'));
-            } else {
-                next();
-            }
-        })
-    }
 }
 
-// app.use(filter);
+app.use(filter);
 
 
 
