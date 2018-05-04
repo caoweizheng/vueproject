@@ -34,9 +34,11 @@ module.exports = {
 
 		}),
 
-		app.get('/detilsPro',async (req,res) => {
+		app.post('/detilsPro',async (req,res) => {
 
-			let proId = req.query.proId;
+			let proId = req.body.proId;
+			console.log(proId)
+			     
 
 			let result = await db.select('products',{'_id':new ObjectID(proId)});
 
