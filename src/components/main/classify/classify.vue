@@ -22,9 +22,9 @@
 				</div>
 			</main>
 		</div>
-		<div class="listBox">
+		<!-- <div class="listBox">
 			<list></list>
-		</div>		
+		</div> -->		
 	</div>
 </template>
 <script>

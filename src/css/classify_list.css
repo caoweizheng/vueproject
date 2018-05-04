@@ -4,13 +4,25 @@
     display: flex;
     flex-direction: column;
 }
+.list_header{
+    width:100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+}
 .classify_list .classify_list_title{
 	display:flex;
+    width:100%;
     height: 0.6rem;
-    background: rgba(248,248,248,.95);
+    background: rgba(248,248,248);
     border-bottom: .01rem solid #d8d8d8;
 }
-
+.classify_list .menu-swiper{
+    position:fixed;
+    top: 0.6rem;
+}
 .classify_list_title .list_left{
     width: .4rem;
     color: #75a739;
@@ -25,8 +37,7 @@
     text-align: right;
     color: #76a741;
 	display: inline-block;
-        line-height: 0.6rem
-	
+    line-height: 0.6rem;
 }
 
 .classify_list_title .list_title{
@@ -36,20 +47,74 @@
     line-height: 0.6rem;
     padding-right: 0.133333rem;
 }
+.classify_list .swiper-container{
+    height:0.48rem;
+    line-height: 0.48rem;
+    background:#fff;
+}
 
 .list_tab{
     height: 0.48rem;
     display: flex;
-
+    flex-direction: row;
+    border-bottom: 0.04rem solid #bbb;
+    
 }
 .list_tab ul li{
-    flex:1;
-
+    height: 100%;
+    width: 1.093333rem;
+    text-align: center;
+    margin:0;
 }
 .list_tab li span{
-    font-size: 0.24rem;
-    display:inline-block;
+    display:block;
+    width:100%;
+    height:100%;
+    font-size: 0.186667rem;
     height: 0.48rem;
-    margin-right: 0.133333rem;
-    /*padding: 0.026667rem 0.066667rem;*/
+    text-align: center;
+}
+.listBox{
+    margin-top: 1rem;
+    background: #fff;
+}
+.list_item a{
+    border-bottom: .01rem solid #d8d8d8;
+}
+.list_price{
+    width:100%;
+    height: 0.556667rem;
+    position:absolute;
+    bottom:-0.026667rem;
+}
+.list_price .danwei{
+    color:#878787;
+}
+.list_price span{
+    line-height: 0.266667rem;
+}
+.list_price .money{
+    font-size: 0.266667rem;
+}
+.list_price .yushou {
+    width: 0.373333rem;
+    height:0.24rem;
+    background: #3a3a3a;
+    color:#fff;
+    position:absolute;
+    left: 0.733333rem;
+    bottom: 0;
+    text-align: center;
+    border-radius: 0.026667rem;
+}
+.list_price i{
+    display:block;
+    width:0.266667rem;
+    height:0.266667rem;
+    line-height: 0.186667rem;
+    font-size: 0.24rem;
+    text-align: center;
+    position:absolute;
+    right: 0;
+    top: 0.293333rem;;
 }
