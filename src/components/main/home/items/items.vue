@@ -138,11 +138,17 @@
                 console.log(self.itemData01.length);
             });
              var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
+                // lopper:true,
+      slidesPerView: 1,
       spaceBetween: 30,
+      slidesOffsetBefore : 100,
+      //     paginationClickable: true,
+    //……
+    // observer:true,//修改swiper自己或子元素时，自动初始化swiper
+    // observeParents:true,//修改swiper的父元素时，自动初始化swiper
       pagination: {
         el: '.swiper-pagination',
-        clickable: true,
+        clickable: true
       },
     });
 

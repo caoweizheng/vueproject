@@ -25,6 +25,8 @@ import classifyDatagrid from '../components/main/classify/classifyDatagrid.vue';
 
 import classifyDatagrid2 from '../components/main/classify/classifyDatagrid2.vue';
 
+import list from '../components/list/list.vue'
+
 const router = new VueRouter({
 	routes:[
 		// 后端登录
@@ -53,7 +55,9 @@ const router = new VueRouter({
 			{path:'/my',component:my,name:'my'}
 
 		]},
-		{path:'/inClassify',component:classifyDatagrid2}
+		{path:'/inClassify',component:classifyDatagrid2},
+
+		{path:'/list',component:list,name:'list'}
 	]
 })
 

@@ -1,0 +1,55 @@
+.classify_list{
+    height: 100%;
+    /*设置成弹性盒子，并且设置主轴为垂直向下*/
+    display: flex;
+    flex-direction: column;
+}
+.classify_list .classify_list_title{
+	display:flex;
+    height: 0.6rem;
+    background: rgba(248,248,248,.95);
+    border-bottom: .01rem solid #d8d8d8;
+}
+
+.classify_list_title .list_left{
+    width: .4rem;
+    color: #75a739;
+    display: inline-block;
+    font-size: .22rem;
+    line-height: 0.6rem;
+    padding-left: 0.133333rem;
+}
+.classify_list_title .list_search{
+	width: .8rem;
+    margin-right: .08rem;
+    text-align: right;
+    color: #76a741;
+	display: inline-block;
+        line-height: 0.6rem
+	
+}
+
+.classify_list_title .list_title{
+	text-align:center;
+	flex:1;
+    font-size: .27rem;
+    line-height: 0.6rem;
+    padding-right: 0.133333rem;
+}
+
+.list_tab{
+    height: 0.48rem;
+    display: flex;
+
+}
+.list_tab ul li{
+    flex:1;
+
+}
+.list_tab li span{
+    font-size: 0.24rem;
+    display:inline-block;
+    height: 0.48rem;
+    margin-right: 0.133333rem;
+    /*padding: 0.026667rem 0.066667rem;*/
+}

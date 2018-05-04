@@ -8,8 +8,8 @@
 			</router-link>
 		</h3>
 		<li v-for="(obj,idx) in (fenlei[$route.params.data || 'gyyx'])" :key="idx">
-			<router-link to="/list">
-				<img :src="obj.img" alt="" />
+			<router-link to="/list" >
+				<img :src="obj.img" alt="" @click="setClType($route.params.data)"/>
 				<span>{{obj.name}}</span>
 			</router-link>
 			
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+		import router from '../../../router/router.js'
 	export default{
 		data(){
 			return{
@@ -120,6 +121,15 @@
 				
 					
 				}
+			}
+		},
+		methods:{
+			setClType(type){
+
+				console.log(type)
+				     
+				this.$store.commit('increment',type);
+				     
 			}
 		},
 		mounted(){

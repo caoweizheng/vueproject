@@ -61,7 +61,16 @@
 	          })
 
 			}
-		}
+		},
+       mounted(){
+            console.log(this.$route.query.pid)
+
+            http.post('detilsPro',{proId:'5ae945e7a68e6cf80b4ed803'}).then((res) => {
+                console.log(res)
+                     
+            })
+
+        }
 
 	}
 </script>

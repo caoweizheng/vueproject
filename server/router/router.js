@@ -2,6 +2,8 @@ const user = require('./user.js');
 
 const product = require('./product.js');
 
+const carlist = require('./carlist.js');
+
 const express = require('express');
 
 const path = require('path');
@@ -78,6 +80,8 @@ const filter = (req, res ,next) => {
 
 user.reg(app,jwt);
 product.reg(app);
+
+carlist.reg(app);
 
 const http = require('http');
 
