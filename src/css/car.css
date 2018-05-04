@@ -8,44 +8,45 @@ html,body{
     height:100%;
     display:flex;
     flex-direction: column;
+    position:relative;
 }
 #car_header{
-    height:1.173333rem;
+    height:0.586667rem;
 }
 #car_header ul{
-    height:1.173333rem;
+    height:0.586667rem;
     display:flex;
 }
 #car_header .first{
     width:2.346667rem;
-    height:1.173333rem;
-    padding-left:0.4rem;
+    height:0.586667rem;
+    padding-left:0.2rem;
 }
 #car_header .first i{
     display:block;
-    font-size:0.666667rem;
-    padding-top:0.266667rem;
+    font-size:0.32rem;
+    padding-top:0.133333rem;
 }
 #car_header .two{
-    width:5.306667rem;
-    height:1.173333rem;
+    width:2.653333rem;
+    height:0.586667rem;
 }
 #car_header .two p{
-    font-size:0.48rem;
-    line-height:1.173333rem;
+    font-size:0.24rem;
+    line-height:0.586667rem;
     text-align:center;
     color:#75A739;
 }
 #car_header .three{
-    width:2.386667rem;
-    height:1.173333rem;
-    padding-right:0.266667rem;
+    width:2.4rem;
+    height:0.586667rem;
+    padding-left:0.533333rem;
 }
 #car_header .three p{
-    font-size:0.32rem;
-    line-height:1.173333rem;
+    font-size:0.16rem;
+    line-height:0.586667rem;
     color:#75A739;
-    padding-left:1.413333rem;
+    padding-left:0.706667rem;
 }
 
 
@@ -54,60 +55,134 @@ html,body{
     overflow-x:hidden;
 }
 #car_main .main_site{
-    background:#58bc58;
-    height:2.133333rem;
-    margin-bottom:0.266667rem;
+    height:1.066667rem;
+    margin-bottom:0.133333rem;
+    border-top:0.026667rem solid #D8D8D8; 
+    border-bottom:0.026667rem solid #D8D8D8;
 }
 #car_main .main_site p{
     display:inline-block;
-    padding-left:0.666667rem;
-    line-height:2.0rem;
+    padding-left:0.333333rem;
+    line-height:1.0rem;
 }
 #car_main .main_site p img{
     display:inline-block;
-    width:0.666667rem;
+    width:0.333333rem;
+}
+#car_main .main_site p span{
+    font-size:0.213333rem;
+}
+#car_main .main_site .main_site1{
+    width:5.0rem;
+    height:5.933333rem;
+    position:absolute;
+    bottom:0;
+    background:#fff;
+}
+#car_main .main_site1 .main_site11{
+    height:0.533333rem;
+    border-bottom:0.013333rem solid #D8D8D8;
+}
+.main_site1 .main_site11 h5{
+    font-size:0.213333rem;
+    line-height:0.533333rem;
+    color:#3A3A3A;
+    text-align:center;
+    border-top:0.013333rem solid #D8D8D8;
+}
+.main_site1 .main_site12>button{
+    width:5.0rem;
+    height:0.586667rem;
+    color:#fff;
+    font-size:0.213333rem;
+    line-height:0.586667rem;
+    text-align:center;
+    background:#FF8000;
+    border:none;
+    position:absolute;
+    bottom:0;
 }
 #car_main .main_sp{
-    height:0.8rem;
-    padding-left:0.266667rem;
-    border-bottom:0.053333rem solid #D8D8D8;
+    height:0.4rem;
+    padding-left:0.133333rem;
+    border-bottom:0.026667rem solid #D8D8D8;
 }
 #car_main .main_sp p{
     color:#878787;
-    font-size:0.32rem;
-    line-height:0.8rem;
+    font-size:0.16rem;
+    line-height:0.4rem;
 }
 .main_goods ul li{
-    padding:0.266667rem;
+    height:1.466667rem;
+    padding:0.133333rem;
 }
-.main_goods ul li a div{
-    float:left;
+.main_goods ul li>input{
+    position:absolute;
+    left:0.266667rem;
+    top:2.733333rem;
 }
 .main_goods ul li a .main_goods1{
-    padding-right:0.266667rem;
+    height:1.2rem;
+    padding-right:0.133333rem;
+    padding-left:0.4rem;
 }
 .main_goods ul li a div img{
-    width:2.4rem;
+    width:1.2rem;
+    float:left;
 }
-.main_goods ul li a div .title{
+.main_goods ul li a div p{
+    margin-left:1.466667rem;
+}
+.main_goods ul li a div .title2{
     color:#3A3A3A;
-    font-size:0.32rem;
-    padding-bottom:1.066667rem;
+    font-size:0.16rem;
+    padding-bottom:0.266667rem;
 }
-.main_goods ul li a div .volume{
-    font-size:0.266667rem;
+.main_goods ul li a div .volume2{
+    font-size:0.16rem;
     color:#878787;
 }
-.main_goods ul li a div .price{
-    font-size:0.266667rem;
+.main_goods ul li a div .price2{
+    font-size:0.16rem;
     color:#FF8000;
 }
-.main_goods ul li a div .price span{
-    font-size:0.4rem;
-    padding-right:2.666667rem;
+.main_goods ul li a div .price2 span{
+    font-size:0.213333rem;
+    padding-right:1.066667rem;
 }
-.main_goods ul li a div .price input{
-    width:1.333333rem;
+.main_goods ul li a div .price2 button{
+    height:0.293333rem;
+    text-align:center;
+}
+.main_goods ul li a div .price2 input{
+    width:0.4rem;
     border:0.013333rem solid #ccc;
     text-align:center;
+}
+
+
+#car_footer{
+    border-top:1px solid #D3D3D3;
+    height:0.666667rem;
+    /*background:red;*/
+}
+#car_footer p{
+    padding-left:2.0rem;
+    font-size:12px;
+    line-height:50px;
+    color:#878787;
+}
+#car_footer p span{
+    font-size:0.213333rem;
+    line-height:0.666667rem;
+    color:#FF8000;
+    padding-right:0.266667rem;
+}
+#car_footer p .btn1{
+    width:1.733333rem;
+    height:0.666667rem;
+    background:#FF8000;
+    border:none;
+    font-size:0.213333rem;
+    color:#fff;
 }
