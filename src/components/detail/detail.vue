@@ -55,7 +55,7 @@
                 </div>
             </router-link>
 
-            <button>加入购物车</button>
+            <button class="btn_d" @click="addCar(val)">加入购物车</button>
         </div>
     </div>
 </template>
@@ -77,6 +77,13 @@
         methods:{
             changeShow(){
                 this.isShow = !this.isShow;
+            },
+
+            addCar(id){
+                
+                http.post('addCar',{'proid':id}).then((res) => {
+                    console.log(res);
+                });
             }
         },
 

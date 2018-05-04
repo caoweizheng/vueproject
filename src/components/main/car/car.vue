@@ -36,9 +36,9 @@
                                 <p class="volume2">{{val.volume}}</p>
                                 <p class="price2">￥
                                     <span>{{val.price}}</span>
-                                    <button @click="increment">-</button>
+                                    <button class="btnn" @click="increment">-</button>
                                     <input type="number" :value="total" min="1" />
-                                    <button @click="increment1">+</button>
+                                    <button class="btnn" @click="increment1">+</button>
                                 </p>
                             </div>
                         </a>

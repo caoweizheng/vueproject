@@ -119,6 +119,7 @@ html,body{
     height:0.426667rem;
 }
 #d_main .d_main1 .volume1 span{
+    padding:5px;
     font-size:0.213333rem;
     background:#FF8000;
     color:#ffffff;
@@ -184,7 +185,7 @@ html,body{
     top:0.133333rem;
     left:0.133333rem;
 }
-#d_footer button{
+#d_footer .btn_d{
     width:2.4rem;
     height:0.6rem;
     position:absolute;
