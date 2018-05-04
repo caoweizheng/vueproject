@@ -2,7 +2,9 @@
 /* CSS Document */
 html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,header,menu{ margin:0; padding:0; }
 ul, ol{ list-style:none; }
+
 a { color:#666; text-decoration:none; font-size:0.186667rem;}
+
 i,em{font-style:normal;}
 .clear:after{content:".";clear:both;overflow:hidden;height:0px;visibility:hidden;display:block;}
 input{outline:none;}
@@ -20,4 +22,14 @@ input{outline:none;}
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+html{
+  font-size: 468.75%;
+
+  
+}
+body{
+  font-size: .16rem;
+} 
+
 

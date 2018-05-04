@@ -57,40 +57,50 @@
     }
     .head{
         width: 100%;
+
         height: 0.613333rem;
+
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
     .head h3{
+
         font-size: 0.253333rem;
+
         font-weight: 100;
         flex: 1;
         text-align: center;
     }
     .back{
         display: block;
+
         width: 1.173333rem;
         height: 100%;
         margin-left: 0.106667rem;
+
         position: relative;
         color: #76a741;
     }
     .back i{
         position: absolute;
+
         left: 0.106667rem;
         top: 0.306667rem;
         display: inline-block;
         font-size: 0.533333rem;
         height: 0.266667rem;
         line-height: 0.266667rem;
+
     }
     .next{
         width: 1.173333rem;
         height: 100%;
         line-height: 0.346667rem;
         text-align: right;
+
         margin-right: 0.106667rem;
+
         color: #76a741;
         font-size: 0.186667rem;
     }
@@ -104,12 +114,15 @@
         width: 100%;
         height: 0.44rem;
         line-height: 0.44rem;
+
         padding-left: 1.066667rem;
+
         box-sizing: border-box;
         position: relative;
         background-color: #eee;
         border-radius: 0.066667rem;
         color: #878787;
+
         font-size: 0.186667rem;
     }
     .l_searchBox i{
@@ -117,6 +130,7 @@
         height: 0.266667rem;
         font-size: 0.266667rem;
         margin: 0 0.133333rem;
+
         position: relative;
         line-height: 0.426667rem;
     }
@@ -130,17 +144,21 @@
         height: 0.44rem;
         line-height: 0.44rem;
         position: absolute;
+
         left: 0.266667rem;
+
         top: 0;
         color: #929292;
     }
     .l_search span i{
         display: inline-block;
+
         height: 0.266667rem;
         color: #3a3a3a;
     }
     .addressList{
         margin-top: 1.2rem;
+
     }
     .addressList h5{
         margin: 0;
@@ -148,7 +166,9 @@
         background-color: #f5f5f5;
         color: #878787;
         padding: 0.16rem;
+
         font-size: 0.16rem;
+
     }
     .c_item{
         background-color: #fff;
@@ -164,10 +184,12 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+
         font-size: 0.186667rem;
     }
     .relocation{
         font-size: 0.186667rem;
+
         color: #ff8000;
     }
 </style>
