@@ -18,6 +18,10 @@ module.exports = {
 			     
 		  }),
 
+      app.get('/getState',(req,res) => {
+
+        
+      })
 
       app.post('/userlogin', async (req,res) => {
       console.log('login')

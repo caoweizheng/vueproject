@@ -51,14 +51,14 @@ app.all('*', function(req, res, next) {
 const filter = (req, res ,next) => {
       
      let url = req.originalUrl;
-     if(url == '/userlogin'){
+     if(!url == '/getState'){
         return next();
      }
 
     let token = req.headers['token'];
     
     if(!token) {
-        console.log('notoken')
+        console.log('notoken');
         res.send(apiResult(false,'','NoState'));
     } else {
         console.log('hastoken')

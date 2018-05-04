@@ -20,7 +20,8 @@ module.exports = {
 					title:result.data[0].title,
 					price:result.data[0].price,
 					target_type:result.data[0].target_type,
-					volume:result.data[0].volume
+					volume:result.data[0].volume,
+					image:result.data[0].image
 				}
 
 				let g_result = await db.insert('carlist',goods); 
