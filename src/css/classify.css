@@ -4,10 +4,11 @@
     flex-direction: column;
 
 }
+
 .menuBox{
     /*display:none;*/
     height:100%;
-}
+
 .c_search{
 
     top: 0;
@@ -32,12 +33,10 @@
 .classify_main{
 	flex:1;
 	display:flex;
-    height: calc(100% - .89rem);
 }
 .classify_main .classify_left{
 	width: 1.04rem;
 	background: #F5F5F5;
-
 }
 .classify_main .classify_left li a{
 	display: block;
@@ -55,6 +54,13 @@
 	background: #fff;
 	color:green;
 }
+
+/*.classify_main .classify_left li:nth-of-type(1) a{
+    border-left: 0.053333rem solid green;
+    background: #fff;
+	color:green;
+} */
+
 
 .classify_right{
 	flex:1;

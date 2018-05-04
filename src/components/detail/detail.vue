@@ -11,8 +11,8 @@
                     </ul>
                 </li>
                 <li class="d3">
-                    <img src="../../img/svg/sheng.svg"/>
-                    <ul>
+                    <img src="../../img/svg/sheng.svg" @click="changeShow"/>
+                    <ul v-show="isShow">
                         <li><p><i class="fa fa-home"></i>首页</p></li>
                         <li><p><i class="fa fa-search"></i>搜索</p></li>
                         <li><p><i class="fa fa-window-restore"></i>分类</p></li>
@@ -21,12 +21,12 @@
             </ul>
         </div>
         <div id="d_main">
-            <img src="https://imgjd3.fruitday.com/images/product_pic/2050/1/1-370x370-2050-4WW4TYTA.jpg" />
-            <div class="d_main1">
-                <p class="title1">橙先生-美国脐橙</p>
-                <p class="subtitle1">冲破寒冬 我就是更甜</p>
-                <p class="price1">￥<span>98</span></p>
-                <p class="volume1"><span>12个</span></p>
+            <div class="d_main1" v-for="(val,key) in detilData">
+            <img :src="val.image" />
+                <p class="title1">{{val.title}}</p>
+                <p class="subtitle1">{{val.subtitle}}</p>
+                <p class="price1">￥<span>{{val.price}}</span></p>
+                <p class="volume1"><span>{{val.volume}}</span></p>
             </div>
             <div class="d_main2">
                 <p>送至
@@ -44,12 +44,18 @@
                     <span>98%好评 ></span>
                 </p>
             </div>
+            <div>
+                <img src="../../img/detail.png" height="451" width="375" alt="" />
+            </div>
         </div>
         <div id="d_footer">
-            <div class="d_footer1">
-                <i class="fa fa-cart-plus"></i>
-            </div>
-            <button>加入购物车</button>
+            <router-link to="/car">
+                <div class="d_footer1">
+                    <i class="fa fa-cart-plus"></i>
+                </div>
+            </router-link>
+
+            <button class="btn_d" @click="addCar(val)">加入购物车</button>
         </div>
     </div>
 </template>
@@ -57,7 +63,39 @@
 <script>
     import '../../css/base.css';
     import '../../css/detail.css';
+    import http from '../../utils/httpClient.js';
+    import router from '../../router/router.js';
     export default{
+        data(){
+            return {
+                isShow:false,
+                detilData:{}
+            }
 
+        },
+
+        methods:{
+            changeShow(){
+                this.isShow = !this.isShow;
+            },
+
+            addCar(id){
+                
+                http.post('addCar',{'proid':id}).then((res) => {
+                    console.log(res);
+                });
+            }
+        },
+
+        mounted(){
+            console.log(this.$route.query.pid)
+
+            http.post('detilsPro',{proId:this.$route.query.pid}).then((res) => {
+                this.detilData = res.data.data
+
+                     
+            })
+
+        }
     }
 </script>
