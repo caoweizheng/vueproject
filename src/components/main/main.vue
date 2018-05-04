@@ -17,7 +17,7 @@
   import router from '../../router/router.js';
   export default {
     mounted(){
-      router.push({name:'home'});
+      // router.push({name:'home'});
     }
   }
 </script>
