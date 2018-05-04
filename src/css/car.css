@@ -11,15 +11,15 @@ html,body{
     position:relative;
 }
 #car_header{
-    height:0.586667rem;
+    height:0.613333rem;
 }
 #car_header ul{
-    height:0.586667rem;
+    height:0.613333rem;
     display:flex;
 }
 #car_header .first{
     width:2.346667rem;
-    height:0.586667rem;
+    height:0.613333rem;
     padding-left:0.2rem;
 }
 #car_header .first i{
@@ -29,22 +29,22 @@ html,body{
 }
 #car_header .two{
     width:2.653333rem;
-    height:0.586667rem;
+    height:0.613333rem;
 }
 #car_header .two p{
     font-size:0.24rem;
-    line-height:0.586667rem;
+    line-height:0.613333rem;
     text-align:center;
     color:#75A739;
 }
 #car_header .three{
     width:2.4rem;
-    height:0.586667rem;
+    height:0.613333rem;
     padding-left:0.533333rem;
 }
 #car_header .three p{
     font-size:0.16rem;
-    line-height:0.586667rem;
+    line-height:0.613333rem;
     color:#75A739;
     padding-left:0.706667rem;
 }
@@ -57,8 +57,8 @@ html,body{
 #car_main .main_site{
     height:1.066667rem;
     margin-bottom:0.133333rem;
-    border-top:0.026667rem solid #D8D8D8; 
-    border-bottom:0.026667rem solid #D8D8D8;
+    border-top:0.013333rem solid #D8D8D8; 
+    border-bottom:0.013333rem solid #D8D8D8;
 }
 #car_main .main_site p{
     display:inline-block;
@@ -78,6 +78,7 @@ html,body{
     position:absolute;
     bottom:0;
     background:#fff;
+    z-index:100000;
 }
 #car_main .main_site1 .main_site11{
     height:0.533333rem;
@@ -92,10 +93,10 @@ html,body{
 }
 .main_site1 .main_site12>button{
     width:5.0rem;
-    height:0.586667rem;
+    height:0.613333rem;
     color:#fff;
     font-size:0.213333rem;
-    line-height:0.586667rem;
+    line-height:0.613333rem;
     text-align:center;
     background:#FF8000;
     border:none;
@@ -121,10 +122,14 @@ html,body{
     left:0.266667rem;
     top:2.733333rem;
 }
+.main_goods ul li a{
+    text-decoration:none;
+}
 .main_goods ul li a .main_goods1{
-    height:1.2rem;
+    height:1.226667rem;
     padding-right:0.133333rem;
     padding-left:0.4rem;
+    border-bottom:1px solid #D8D8D8;
 }
 .main_goods ul li a div img{
     width:1.2rem;
@@ -145,12 +150,13 @@ html,body{
 .main_goods ul li a div .price2{
     font-size:0.16rem;
     color:#FF8000;
+    text-align:right;
 }
 .main_goods ul li a div .price2 span{
     font-size:0.213333rem;
-    padding-right:1.066667rem;
+    padding-right:0.8rem;
 }
-.main_goods ul li a div .price2 button{
+.main_goods ul li a div .price2 .btnn{
     height:0.293333rem;
     text-align:center;
 }
@@ -162,25 +168,26 @@ html,body{
 
 
 #car_footer{
+    z-index:1000;
+    background:#fff;
     border-top:1px solid #D3D3D3;
-    height:0.666667rem;
-    /*background:red;*/
 }
 #car_footer p{
+    height:100%;
     padding-left:2.0rem;
-    font-size:12px;
-    line-height:50px;
+    font-size:0.16rem;
+    line-height:0.613333rem;
     color:#878787;
 }
 #car_footer p span{
     font-size:0.213333rem;
-    line-height:0.666667rem;
+    line-height:0.613333rem;
     color:#FF8000;
     padding-right:0.266667rem;
 }
 #car_footer p .btn1{
     width:1.733333rem;
-    height:0.666667rem;
+    height:0.613333rem;
     background:#FF8000;
     border:none;
     font-size:0.213333rem;
