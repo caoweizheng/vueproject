@@ -185,7 +185,7 @@ html,body{
     top:0.133333rem;
     left:0.133333rem;
 }
-#d_footer .btn_d{
+#d_footer .plus{
     width:2.4rem;
     height:0.6rem;
     position:absolute;
@@ -193,5 +193,8 @@ html,body{
     background:#FF8000;
     color:#fff;
     font-size:0.213333rem;
+    line-height:0.613333rem;
+    text-align:center;
+    text-decoration:none;
     border:none;
 }
