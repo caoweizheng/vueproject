@@ -22,6 +22,7 @@
         </div>
         <div id="d_main">
             <div class="d_main1" v-for="(val,key) in detilData">
+            <!-- <div class="d_main1" v-for="(val,key) in detilData" :data-id="val.id" > -->
             <img :src="val.image" />
                 <p class="title1">{{val.title}}</p>
                 <p class="subtitle1">{{val.subtitle}}</p>
@@ -55,7 +56,8 @@
                 </div>
             </router-link>
 
-            <button class="btn_d" @click="addCar(val)">加入购物车</button>
+            <a class="plus">加入购物车</a>
+            <!-- <a class="plus" @click="addCar(val.id)">加入购物车</a> -->
         </div>
     </div>
 </template>
@@ -79,12 +81,20 @@
                 this.isShow = !this.isShow;
             },
 
-            addCar(id){
-                
-                http.post('addCar',{'proid':id}).then((res) => {
-                    console.log(res);
-                });
-            }
+            // addCar(id){
+
+            //     http.post('getState',{}).then((res) => {
+            //         console.log(res)
+                                     
+            //         if(res.data.state){
+            //             http.post('addCar',{'proid':id}).then((res) => {
+            //                 console.log(res);
+            //             });
+            //         }else{
+            //             this.$router.push({name:'userlogon'});
+            //         }
+            //     })
+            // }
         },
 
         mounted(){

@@ -42,9 +42,160 @@
     </div>
 </template>
 
+<style>
+    .l_nav{
+        display: block;
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        color: #65a032;
+        line-height: 0.573333rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-bottom: 0.013333rem solid #dfdfdf;
+    }
+    .head{
+        width: 100%;
+
+        height: 0.613333rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .head h3{
+
+        font-size: 0.253333rem;
+
+        font-weight: 100;
+        flex: 1;
+        text-align: center;
+    }
+    .back{
+        display: block;
+
+        width: 1.173333rem;
+        height: 100%;
+        margin-left: 0.106667rem;
+
+        position: relative;
+        color: #76a741;
+    }
+    .back i{
+        position: absolute;
+
+        left: 0.106667rem;
+        top: 0.306667rem;
+        display: inline-block;
+        font-size: 0.533333rem;
+        height: 0.266667rem;
+        line-height: 0.266667rem;
+
+    }
+    .next{
+        width: 1.173333rem;
+        height: 100%;
+        line-height: 0.346667rem;
+        text-align: right;
+
+        margin-right: 0.106667rem;
+
+        color: #76a741;
+        font-size: 0.186667rem;
+    }
+    .l_search{
+        background-color: #fff;
+        padding: 0 0.133333rem 0.133333rem;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .l_searchBox{
+        width: 100%;
+        height: 0.44rem;
+        line-height: 0.44rem;
+
+        padding-left: 1.066667rem;
+
+        box-sizing: border-box;
+        position: relative;
+        background-color: #eee;
+        border-radius: 0.066667rem;
+        color: #878787;
+
+        font-size: 0.186667rem;
+    }
+    .l_searchBox i{
+        display: inline-block;
+        height: 0.266667rem;
+        font-size: 0.266667rem;
+        margin: 0 0.133333rem;
+
+        position: relative;
+        line-height: 0.426667rem;
+    }
+    .l_searchBox input{
+        height: 100%;
+        border: none;
+        background: #eee;
+    }
+    .l_search span{
+        display: inline-block;
+        height: 0.44rem;
+        line-height: 0.44rem;
+        position: absolute;
+
+        left: 0.266667rem;
+
+        top: 0;
+        color: #929292;
+    }
+    .l_search span i{
+        display: inline-block;
+
+        height: 0.266667rem;
+        color: #3a3a3a;
+    }
+    .addressList{
+        margin-top: 1.2rem;
+
+    }
+    .addressList h5{
+        margin: 0;
+        font-weight: 400;
+        background-color: #f5f5f5;
+        color: #878787;
+        padding: 0.16rem;
+
+        font-size: 0.16rem;
+
+    }
+    .c_item{
+        background-color: #fff;
+        padding: 0.2rem 0.133333rem 0.2rem 0;
+        margin: 0 0 0 0.133333rem;
+        display: flex;
+        flex-direction: row;
+        font-size: 0.186667rem;
+        color: #888;
+    }
+    .local-address{
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        font-size: 0.186667rem;
+    }
+    .relocation{
+        font-size: 0.186667rem;
+
+        color: #ff8000;
+    }
+</style>
+
 
 <script>
-    import '../../../../assets/css/home.css';
     export default {
         methods:{
             goHome:function(){

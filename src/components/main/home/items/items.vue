@@ -9,15 +9,15 @@
             </div>
             <div class="swiper-container itemsBox">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide itemDiv" style="width:1.28rem;" v-for="obj in itemData01" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
+                    <div class="swiper-slide itemDiv" v-for="obj in itemData01" :key="obj.title" :data-id="obj._id" >
                         <a href="#" class="imgBox">
-                            <img :src="obj.image" :alt="obj.title">
+                            <img :src="obj.image" :alt="obj.title" @click="toDetils(obj._id)">
                             <span>预售</span>
                         </a>
                         <p class="msg">{{obj.subtitle}}</p>
                         <div class="price">
                             <span>￥<em class="money">{{obj.price}}</em><em>/{{obj.volume}}</em></span>
-                            <i>+</i>
+                            <i class="add" ref="add_car" @click="addCar(obj._id)">+</i>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
             </div>
             <div class="swiper-container itemsBox">
                 <div class="swiper-wrapper">
-                   <div class="swiper-slide itemDiv" style="width:1.28rem;" v-for="obj in itemData02" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
+                   <div class="swiper-slide itemDiv" v-for="obj in itemData02" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
                         <a href="#" class="imgBox">
                             <img :src="obj.image" :alt="obj.title">
                             <span>预售</span>
@@ -45,7 +45,7 @@
                         <p class="msg">{{obj.subtitle}}</p>
                         <div class="price">
                             <span>￥<em class="money">{{obj.price}}</em><em>/{{obj.volume}}</em></span>
-                            <i>+</i>
+                            <i class="add" ref="add_car" @click="addCar(obj._id)">+</i>
                         </div>
                     </div>
                     
@@ -58,7 +58,7 @@
             </div>
             <div class="swiper-container itemsBox">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide itemDiv" style="width:1.28rem;" v-for="obj in itemData03" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
+                    <div class="swiper-slide itemDiv" v-for="obj in itemData03" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
                         <a href="#" class="imgBox">
                             <img :src="obj.image" :alt="obj.title">
                             <span>预售</span>
@@ -66,7 +66,7 @@
                         <p class="msg">{{obj.subtitle}}</p>
                         <div class="price">
                             <span>￥<em class="money">{{obj.price}}</em><em>/{{obj.volume}}</em></span>
-                            <i>+</i>
+                            <i class="add" ref="add_car" @click="addCar(obj._id)">+</i>
                         </div>
                     </div>
                     
@@ -79,7 +79,7 @@
             </div>
             <div class="swiper-container itemsBox">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide itemDiv" style="width:1.28rem;" v-for="obj in itemData04" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
+                    <div class="swiper-slide itemDiv" v-for="obj in itemData04" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
                         <a href="#" class="imgBox">
                             <img :src="obj.image" :alt="obj.title">
                             <span>预售</span>
@@ -87,7 +87,7 @@
                         <p class="msg">{{obj.subtitle}}</p>
                         <div class="price">
                             <span>￥<em class="money">{{obj.price}}</em><em>/{{obj.volume}}</em></span>
-                            <i>+</i>
+                            <i class="add" ref="add_car" @click="addCar(obj._id)">+</i>
                         </div>
                     </div>
                     
@@ -104,6 +104,7 @@
     import Swiper from '../../../../assets/js/swiper.min.js';
     import http from '../../../../assets/js/httpclient.js';
 
+
     export default {
         data () {
             return {
@@ -118,12 +119,18 @@
         methods:{
             toDetils(item){
                 this.$router.push({name:'detail',query:{pid:item}});   
+            },
+            addCar(id){
+                
+                http.post('addCar',{'proid':id}).then((res) => {
+                    console.log(res);
+                });
             }
         },
         mounted(){
             var self = this;
-            http.get('http://10.3.133.83:8888/getProduct').then((res) => {
-                console.log(res.data);
+            http.get('getProduct').then((res) => {
+                console.log('data',res.data);
                 for(var i=0;i<res.data.length;i++){
                     if(res.data[i].target_type=='2'){
                         self.itemData01.push(res.data[i]);    
@@ -138,14 +145,18 @@
                 console.log(self.itemData01.length);
             });
              var swiper = new Swiper('.swiper-container', {
-
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-                  pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                  },
-
+                // lopper:true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      slidesOffsetBefore : 100,
+      //     paginationClickable: true,
+    //……
+    // observer:true,//修改swiper自己或子元素时，自动初始化swiper
+    // observeParents:true,//修改swiper的父元素时，自动初始化swiper
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
     });
 
         }
