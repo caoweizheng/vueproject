@@ -1,6 +1,6 @@
 <template>
 
-	<div id="box">
+	<div id="rbox">
 		<h3>Register</h3>
           <div class="form-group">
             <input type="text" class="form-control" v-model="phone" placeholder="username">
@@ -13,7 +13,12 @@
           <button type="submit" class="btn btn-success btn-lg" @click="register">Register</button>  
     </div>
 </template>
-
+<style type="text/css">
+  #rbox{
+    width: 300px;
+    margin: 0 auto;
+  }
+</style>
 <script>
   import http from '../../utils/httpClient.js'
   export default{

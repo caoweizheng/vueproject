@@ -36,9 +36,9 @@
                                 <p class="volume2">{{val.volume}}</p>
                                 <p class="price2">￥
                                     <span>{{val.price}}</span>
-                                    <button class="btnn" @click="increment">-</button>
-                                    <input type="number" :value="total" min="1" />
-                                    <button class="btnn" @click="increment1">+</button>
+                                    <button class="sub" @click="increment($event)">-</button>
+                                    <input type="number" value="1" />
+                                    <button class="add" @click="increment($event)">+</button>
                                 </p>
                             </div>
                         </a>
@@ -59,6 +59,7 @@
     import '../../../css/base.css';
     import '../../../css/car.css';
     import http from '../../../utils/httpClient.js';
+    import $ from 'jquery'
 	export default{
 
         data(){
@@ -75,20 +76,33 @@
             changeShow(){
                 this.isShow = !this.isShow;
             },
-            increment: function(){
-                this.total -= 1;
-                // this.$emit('count')
-            },
-            increment1: function(){
-                this.total += 1;
-                // this.$emit('count')
+            increment(e){
+                var $input=$(e.target).siblings('input');
+                if(e.target.className == "sub"){
+                    if($input.val()*1<=1){
+                        return;
+                    }
+                    $input.val($input.val()*1-1);
+                }else if(e.target.className == "add"){
+                    $input.val($input.val()*1+1);
+                }
+                
             }
+
         },
         mounted(){
-            http.get('getCar').then((res) => {
-                console.log(res)
-                this.detilData = res.data.data
-            })
+                http.post('getState',{}).then((res) => {
+                    console.log(res)
+                         
+                    if(res.data.state){
+                        http.get('getCar').then((res) => {
+                            console.log(res)
+                            this.detilData = res.data.data
+                        })
+                    }else{
+                        this.$router.push({name:'userlogon'});
+                    }
+                })
         }
 	}
 </script>

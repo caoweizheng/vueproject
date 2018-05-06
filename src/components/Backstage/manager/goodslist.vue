@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="bggoodslist">
 		<div class="searchBox">
 			<input type="text" />
 			<button class="btn btn-success" @click="searchProduct">搜索</button>
@@ -7,7 +7,7 @@
 
 		</div>
 
-		<div class="list">
+		<div class="bag_list">
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -48,7 +48,7 @@
 
 		</div>
 		
-		<div class="mark" v-show="addWid">
+		<div class="bgmark" v-show="addWid">
 			<div class="addpro" >
 
 				<span class="close" @click="addWid = false">&times;</span>
@@ -67,7 +67,7 @@
 				
 			</div>
 		</div>
-		<div class="mark" v-show="editWid">
+		<div class="bgmark" v-show="editWid">
 			<div class="addpro" >
 
 				<span class="close" @click="editWid = false">&times;</span>

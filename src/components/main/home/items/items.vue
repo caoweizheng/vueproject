@@ -104,6 +104,8 @@
     import Swiper from '../../../../assets/js/swiper.min.js';
     import http from '../../../../assets/js/httpclient.js';
 
+    import hc from '../../../../utils/httpClient.js'
+
 
     export default {
         data () {
@@ -121,10 +123,17 @@
                 this.$router.push({name:'detail',query:{pid:item}});   
             },
             addCar(id){
-                
-                http.post('addCar',{'proid':id}).then((res) => {
-                    console.log(res);
-                });
+                hc.post('getState',{}).then((res) => {
+                    console.log(res)
+                         
+                    if(res.data.state){
+                        hc.post('addCar',{'proid':id}).then((res) => {
+                            console.log(res);
+                        });
+                    }else{
+                        this.$router.push({name:'userlogon'});
+                    }
+                })
             }
         },
         mounted(){
