@@ -1,0 +1,30 @@
+#userbox table{
+	width: 3.333333rem;
+	padding: 0.133333rem;
+}
+#userbox table span{
+	display:inline-block;
+	width: 3.333333rem;
+	line-height: 0.3rem;
+	font-size: 0.203333rem;
+}
+#userbox .deleteUser{
+	padding: 0.04rem 0.066667rem;
+}
+
+#userbox{
+	height: 5.333333rem;
+	overflow-x: hidden;
+}
+#userbox button{
+	width: 0.666667rem;
+	margin: 0;
+}
+#userbox table tr{
+	height: 1.333333rem;
+	padding: 0;
+}
+#userbox table tr td{
+
+	padding: 0.066667rem;
+}

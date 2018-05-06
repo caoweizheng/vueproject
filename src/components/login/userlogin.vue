@@ -11,7 +11,7 @@
         <div class="account-login-form">
             <div class="form-group">
                 <i class="fa fa-mobile"></i>
-                <input type="tel" class="form-control" v-model="phone" placeholder="手机号">
+                <input type="text" class="form-control" v-model="phone" placeholder="用户名">
                 <span id="helpBlock2" class="error-block" ></span>
             </div>
             <div class="form-group">

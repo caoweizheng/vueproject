@@ -1,5 +1,5 @@
 <template>
-	<div id="box">
+	<div id="userbox">
 		<table class="table table-striped">
 			<thead>
 				<tr>
@@ -21,28 +21,10 @@
 	</div>
 </template>
 
-<style type="text/css">
-	table{
-		width: 400px;
-		padding: 10px;
-	}
-	table span{
-		display:inline-block;
-		width: 250px;
-		line-height: 60px;
-	}
-	.deleteUser{
-		padding: 3px 5px;
-	}
-
-	#box{
-		height: 400px;
-		overflow-x: hidden;
-	}
-</style>
 
 <script type="text/javascript">
 	import http from '../../../utils/httpClient.js';
+	import '../../../css/userlist.css'
 	export default {
 		data(){
 			return {

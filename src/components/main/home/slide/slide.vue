@@ -47,11 +47,12 @@
         height: 100%;
     }
     .slideLi{
+        display:flex;
         width:100%;
         height:1.28rem;
         padding: .0.005333rem 0.08rem 0.053333rem;
     }
-    .slideLi li{
+    .slideLi li{flex:1;
         width: 2.4rem;
         height: 1.186667rem;
         float: left;

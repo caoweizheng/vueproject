@@ -1,7 +1,7 @@
 <template>
 	<section class="my_index">
         <div class="fruitday-userinfo">
-            <div class="header">
+            <div class="wcxheader">
                 <div class="avart-wrapper">
                     <a href="#" class="link"></a>
                     <div class="pull-left avart">
@@ -72,21 +72,21 @@
         padding-bottom:0.6rem;
         font-size: 0.186667rem;
     }
-    .header{
+    .wcxheader{
         left: 0;
         top: 0;
         width: 100%;
         height:2.533333rem;
         position: fixed;
-        background: #ccc;
+        background: #eee;
         z-index: 1000;
     }
-    .my_index .header .avart-wrapper{
+    .my_index .wcxheader .avart-wrapper{
         position: relative;
         height:1.6rem;
         padding:0.4rem 0.2rem 0.4rem 0.266667rem;
     }
-    .my_index .header .avart-wrapper .link{
+    .my_index .wcxheader .avart-wrapper .link{
         position: absolute;
         left: 0;
         top: 0;
@@ -94,7 +94,7 @@
         height: 100%;
         z-index: 2;
     }
-    .my_index .header .avart-wrapper .avart{
+    .my_index .wcxheader .avart-wrapper .avart{
         position: relative;
         height: 0.8rem;
         margin: 0 0.2rem 0 0;
@@ -103,7 +103,7 @@
     .pull-left{
         float: left!important;
     }
-    .my_index .header .avart-wrapper .member-name h2{
+    .my_index .wcxheader .avart-wrapper .member-name h2{
         width:1.866667rem;
         white-space: nowrap;
         overflow: hidden;
@@ -114,7 +114,7 @@
         font-weight: 400;
         color: #3a3a3a;
     }
-    .my_index .header .avart-wrapper .member-name .sign{
+    .my_index .wcxheader .avart-wrapper .member-name .sign{
         position: relative;
         width: 0.933333rem;
         height:0.24rem;
@@ -127,7 +127,7 @@
         display: inline-block;
         z-index: 10;
     }
-    .my_index .header .avart-wrapper .twodi-code{
+    .my_index .wcxheader .avart-wrapper .twodi-code{
         display: block;
         position: absolute;
         top: 0.466667rem;
@@ -136,27 +136,27 @@
         height: 0.4rem;
         z-index: 3;
     }
-    .my_index .header .avart-wrapper .twodi-code .fa{
+    .my_index .wcxheader .avart-wrapper .twodi-code .fa{
         font-size: 0.4rem;
         line-height:0.4rem;
         color: #878787;
     }
-    .my_index .header .preferential{
+    .my_index .wcxheader .preferential{
         padding: 0 0.133333rem;
         width: 100%;
         display:flex;
     }
-    .my_index .header .preferential li{
+    .my_index .wcxheader .preferential li{
         position: relative;
         text-align: center;
        flex:1;
     }
-    .my_index .header .preferential li .name{
+    .my_index .wcxheader .preferential li .name{
         position: relative;
         color: #000;
         font-size: 0.186667rem;
     }
-    .my_index .header .preferential li .value{
+    .my_index .wcxheader .preferential li .value{
         color: #ff7e05;
         font-size: .15rem;
         font-weight: 700;
@@ -203,7 +203,23 @@
     }
 </style>
 <script>
+    import http from '../../../utils/httpClient.js'
 	export default{
+
+        mounted(){
+                http.post('getState',{}).then((res) => {
+                    console.log(res)
+                         
+                    if(res.data.state){
+                        http.get('getCar').then((res) => {
+                            console.log(res)
+                            this.detilData = res.data.data
+                        })
+                    }else{
+                        this.$router.push({name:'userlogon'});
+                    }
+                })
+        }
 		
 	}
 </script>
