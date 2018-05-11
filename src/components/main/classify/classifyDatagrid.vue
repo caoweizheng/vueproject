@@ -133,14 +133,6 @@
 			}
 		},
 		mounted(){
-			// for(var i=0;i<this.titArr.length;i++){
-				// if($route.params.data == 'gyyx'){
-				// 	this.title = '果园优选';
-				// }else{
-				// 	this.title = 'pp';
-				// }
-			// }
-			// console.log($route.params.data);
 		}
 	}
 </script>

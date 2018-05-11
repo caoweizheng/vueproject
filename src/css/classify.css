@@ -55,13 +55,11 @@
 	color:green;
 }
 
-/*.classify_main .classify_left li:nth-of-type(1) a{
-    border-left: 0.053333rem solid green;
-    background: #fff;
+.classify_main .classify_left a.classifyActive{
+	border-left: 0.053333rem solid green;
+	background: #fff;
 	color:green;
-} */
-
-
+}
 .classify_right{
 	flex:1;
 }

@@ -8,7 +8,7 @@
 			<div class="classify_left">
 				<ul>
 
-					<li v-for="obj in menus" :key="obj.path">
+					<li v-for="obj in menus" :key="obj.path" @click="clearActive">
 						<router-link :to="obj.path">{{obj.text}}</router-link>
 					</li>					
 
@@ -21,15 +21,12 @@
 					</router-view>
 				</div>
 			</main>
-		</div>
-		<!-- <div class="listBox">
-			<list></list>
-		</div> -->		
-
+		</div>	
 	</div>
 </template>
 <script>
-	import '../../../css/classify.css'
+	import '../../../css/classify.css';
+	import $ from 'jquery'
 	export default{
 		data(){
             return {
@@ -44,7 +41,17 @@
             }
         },
 		mounted(){
-
+			$('.classify_main .classify_left a').first().addClass('classifyActive')
+			
+			     
+			     
+		},
+		methods:{
+			clearActive(){
+				$('.classify_main .classify_left a').removeClass('classifyActive');
+				console.log(666)
+				     
+			}
 		}
 	}
 </script>

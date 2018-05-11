@@ -2,7 +2,7 @@
     <div id="car">
         <div id="car_header">
             <ul>
-                <li class="first"><i class="fa fa-angle-left"></i></li>
+                <li class="first" @click="tohome"><i class="fa fa-angle-left"></i></li>
                 <li class="two"><p>购物车</p></li>
                 <li class="three"><p>编辑</p></li>
             </ul>
@@ -59,7 +59,9 @@
     import '../../../css/base.css';
     import '../../../css/car.css';
     import http from '../../../utils/httpClient.js';
+
     import $ from 'jquery'
+
 	export default{
 
         data(){
@@ -87,6 +89,9 @@
                     $input.val($input.val()*1+1);
                 }
                 
+            },
+            tohome(){
+                this.$router.push('home')
             }
 
         },

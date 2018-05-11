@@ -101,7 +101,7 @@
         width: 0.32rem;
         height: 0.32rem;
         line-height: 0.32rem;
-        font-size: 0.293333rem;
+        font-size: 0.186667rem;
         text-align: center;
         color: #ff8000;
         border: 0.013333rem solid #ccc;
