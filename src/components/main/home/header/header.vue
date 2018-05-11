@@ -17,8 +17,9 @@
         width: 100%;
         height: 0.506667rem;
         line-height: 0.506667rem;
-        border-bottom: 0.026667rem solid #c8cac7;
+        box-shadow:0 0.026667rem 0.026667rem 0.026667rem #ccc;
         background: #fff;
+        margin-bottom: 0.04rem;
     }
     .position {
         float: left;
@@ -33,11 +34,12 @@
     .position .logo{float: left;}
     .position .logo img {
         display: inline-block;
+        margin-bottom: 0.106667rem;
         width: 0.68rem;
         height: 0.186667rem;
         margin-right: 0.066667rem;
     }
-    .position .map{float: left;}
+    .position .map{float: left;font-size:13px;}
     .position i{font-size: 0.32rem;display: inline-block;height: 0.32rem;}
     .h_search{float:right;padding: 0 0.2rem;}
     .h_search i{font-size: 0.32rem;display: inline-block;height: 0.32rem;}

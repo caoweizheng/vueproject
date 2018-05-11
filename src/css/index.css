@@ -34,7 +34,7 @@ html,body{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
+    text-decoration: none;
     font-size:0.133333rem;
     color: #898989;
 }

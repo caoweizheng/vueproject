@@ -2,7 +2,7 @@
     <div id="detail">
         <div id="d_header">
             <ul>
-                <li class="d1"><i class="fa fa-angle-left"></i></li>
+                <li class="d1" @click="tohome"><i class="fa fa-angle-left"></i></li>
                 <li class="d2">
                     <ul>
                         <li class="active">商品</li>
@@ -84,6 +84,9 @@
                 http.post('addCar',{'proid':id}).then((res) => {
                     console.log(res);
                 });
+            },
+            tohome(){
+                this.$router.push('home');
             }
         },
 

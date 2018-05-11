@@ -4,7 +4,7 @@
 		<div class="list_header">
 			<div class="classify_list_title">
 				<i class="list_left fa fa-chevron-left" @click="goClassify"></i>
-				<p class="list_title">{{lisData[$store.state.type]['title']}}</p>
+				<p class="list_title">{{lisData[$store.state.type || 'gyyx']['title']}}</p>
 				<i class="list_search fa fa-search"></i>
 			</div>
 			<div class="swiper-container menu-swiper swiper-container-horizontal">		
@@ -12,7 +12,7 @@
 		        	<li class="swiper-slide all" style="width: 1.093333rem;">
 		        		<span>全部</span>
 		        	</li>
-		            <li class="swiper-slide" style="width: 1.093333rem;"  v-for="(item,idx) in (lisData[$store.state.type]['data'])">
+		            <li class="swiper-slide" style="width: 1.093333rem;"  v-for="(item,idx) in (lisData[$store.state.type || 'gyyx']['data'])">
 		                <span>{{item}}</span>
 		            </li>
 		        </ul>		

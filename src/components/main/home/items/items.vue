@@ -37,9 +37,9 @@
             </div>
             <div class="swiper-container itemsBox">
                 <div class="swiper-wrapper">
-                   <div class="swiper-slide itemDiv" v-for="obj in itemData02" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
+                   <div class="swiper-slide itemDiv" v-for="obj in itemData02" :key="obj.title" :data-id="obj._id" >
                         <a href="#" class="imgBox">
-                            <img :src="obj.image" :alt="obj.title">
+                            <img :src="obj.image" :alt="obj.title" @click="toDetils(obj._id)">
                             <span>预售</span>
                         </a>
                         <p class="msg">{{obj.subtitle}}</p>
@@ -58,9 +58,9 @@
             </div>
             <div class="swiper-container itemsBox">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide itemDiv" v-for="obj in itemData03" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
+                    <div class="swiper-slide itemDiv" v-for="obj in itemData03" :key="obj.title" :data-id="obj._id" >
                         <a href="#" class="imgBox">
-                            <img :src="obj.image" :alt="obj.title">
+                            <img :src="obj.image" :alt="obj.title" @click="toDetils(obj._id)">
                             <span>预售</span>
                         </a>
                         <p class="msg">{{obj.subtitle}}</p>
@@ -79,9 +79,9 @@
             </div>
             <div class="swiper-container itemsBox">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide itemDiv" v-for="obj in itemData04" :key="obj.title" :data-id="obj._id" @click="toDetils(obj._id)">
+                    <div class="swiper-slide itemDiv" v-for="obj in itemData04" :key="obj.title" :data-id="obj._id" >
                         <a href="#" class="imgBox">
-                            <img :src="obj.image" :alt="obj.title">
+                            <img :src="obj.image" :alt="obj.title" @click="toDetils(obj._id)">
                             <span>预售</span>
                         </a>
                         <p class="msg">{{obj.subtitle}}</p>
